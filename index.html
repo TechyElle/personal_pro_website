@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cielle Mae Peñamora | Portfolio</title>
+  <meta
+    name="description"
+    content="Personal portfolio of Cielle Mae Peñamora, software engineer based in Metro Manila."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+  <main class="page-shell">
+    <section class="hero panel reveal">
+      <div class="hero-main">
+        <div class="hero-avatar-wrap">
+          <img class="hero-avatar" src="1 x 1 pic.jpg" alt="Cielle Mae Peñamora portrait">
+        </div>
+
+        <div class="hero-copy">
+          <div class="hero-headline">
+            <div>
+              <h1 class="hero-name">
+                <span id="name"></span>
+                <span class="verified-badge" aria-hidden="true">✓</span>
+              </h1>
+              <p id="location" class="location location-row"></p>
+              <p id="roles" class="roles"></p>
+            </div>
+
+            <button class="theme-toggle" type="button" aria-label="Toggle theme">
+              <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+            </button>
+          </div>
+
+          <div class="hero-meta-row">
+            <div id="achievements" class="pill-row hero-achievements"></div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Schedule a Call</a>
+            <a id="email-link" class="button button-ghost" href="/">Send Email</a>
+            <a class="button button-ghost" href="#projects">Read my blog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-grid">
+      <div class="primary-column">
+        <section class="panel reveal">
+          <div class="section-heading">
+            <h2>About</h2>
+          </div>
+          <div id="about" class="copy-block"></div>
+        </section>
+
+        <section class="panel reveal">
+          <div class="section-heading section-heading-inline">
+            <h2>Tech Stack</h2>
+            <a class="section-link" href="#projects">View All</a>
+          </div>
+          <div id="tech-stack" class="tech-stack-list"></div>
+        </section>
+
+        <section id="projects" class="panel reveal">
+          <div class="section-heading section-heading-inline">
+            <h2>Recent Projects</h2>
+            <a class="section-link" href="#gallery">View All</a>
+          </div>
+          <div id="projects-list" class="project-grid"></div>
+        </section>
+
+        <section class="two-column">
+          <section class="panel reveal">
+            <div class="section-heading section-heading-inline">
+              <h2>Recent Certifications</h2>
+              <a class="section-link" href="#contact">View All</a>
+            </div>
+            <div id="certifications-list" class="certification-list"></div>
+          </section>
+
+          <section class="panel reveal">
+            <div class="section-heading">
+              <h2>Recommendations</h2>
+            </div>
+            <div id="recommendations" class="recommendation-carousel"></div>
+          </section>
+        </section>
+
+        <section id="contact" class="panel footer-panel reveal">
+          <div class="footer-grid">
+            <div class="footer-column">
+              <h3>A member of</h3>
+              <div id="organizations" class="link-list"></div>
+            </div>
+
+            <div class="footer-column">
+              <h3>Social Links</h3>
+              <div id="socials" class="link-list"></div>
+            </div>
+
+            <div class="footer-column">
+              <h3>Speaking</h3>
+              <p class="footer-copy">
+                Available for speaking at events about software development and emerging technologies.
+              </p>
+              <a class="footer-inline-link" href="mailto:cmpenamora@gmail.com">Get in touch</a>
+            </div>
+
+            <div class="footer-column">
+              <h3>Contact</h3>
+              <div id="contact-actions" class="contact-link-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" class="panel reveal">
+          <div class="section-heading">
+            <h2>Gallery</h2>
+          </div>
+          <div id="gallery-grid" class="gallery-grid"></div>
+        </section>
+      </div>
+
+      <aside class="sidebar-column">
+        <section class="panel access-panel reveal">
+          <div class="access-card">
+            <div class="access-mark" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="access-headline">
+              <p>DEVS ONE HUNDRED</p>
+              <span>ACCESS CARD</span>
+            </div>
+
+            <div class="access-meta">
+              <p class="access-label">FOUNDING MEMBER</p>
+              <p class="access-name">BRYL</p>
+            </div>
+
+            <div class="access-footer">
+              <div>
+                <p class="access-role">DEVELOPER</p>
+              </div>
+              <div class="access-qr" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+          <div class="membership-banner">
+            <strong>I'M PART OF PH100</strong>
+            <span>The annual list of the brightest minds under 30 in the Philippines.</span>
+          </div>
+        </section>
+
+        <section class="panel reveal">
+          <div class="section-heading">
+            <h2>Experience</h2>
+          </div>
+          <div id="experience" class="stack-list"></div>
+        </section>
+      </aside>
+    </section>
+
+    <footer class="site-footer reveal">
+      <p>© 2026 Cielle Mae Peñamora. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
