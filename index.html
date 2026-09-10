@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cielle Mae Peñamora (@TechyElle) | Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio of Cielle Mae Peñamora (@TechyElle), Computer Engineering and Frontend Dev."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/main-styles.css">
+</head>
+<body data-theme="dark">
+  <main class="page-shell">
+    <section class="hero panel reveal">
+      <div class="hero-banner-container">
+        <img
+          class="hero-banner-img"
+          src="assets/github-header.png"
+          alt="TechyElle Header Banner"
+        >
+        <div class="hero-banner-overlay"></div>
+      </div>
+
+      <div class="hero-main">
+        <div class="hero-avatar-wrap">
+          <img
+            class="hero-avatar"
+            src="assets/formal-portrait.png"
+            alt="Cielle Mae Peñamora formal portrait"
+          >
+          <span class="status-indicator" title="Available for opportunities"></span>
+        </div>
+
+        <div class="hero-copy">
+          <header class="hero-headline">
+            <div>
+              <div class="hero-title-row">
+                <h1 class="hero-name">
+                  <span id="name"></span>
+                  <span class="verified-badge" aria-label="Verified Engineer">✓</span>
+                </h1>
+                <span id="handle" class="hero-handle"></span>
+              </div>
+
+              <div class="typing-container">
+                <span class="typing-prompt">&gt;</span>
+                <span id="typing-text" class="typing-text"></span>
+                <span class="typing-cursor" aria-hidden="true">_</span>
+              </div>
+
+              <p id="location" class="location location-row"></p>
+              <p id="roles" class="roles"></p>
+            </div>
+
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle theme"
+            >
+              <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+            </button>
+          </header>
+
+          <div class="hero-meta-row">
+            <div id="achievements" class="pill-row hero-achievements"></div>
+            <div id="fun-badges" class="badge-row"></div>
+          </div>
+
+          <div class="hero-actions">
+            <a
+              id="github-cta"
+              class="button button-primary"
+              href="https://github.com/TechyElle"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="octicon-icon"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+              >
+                <path d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 0 0 5.47 7.59c.4.07.55-.17.55-.38
+                0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+                -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52
+                .28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02
+                .08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04
+                2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75
+                -3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01
+                8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+              </svg>
+              Follow @TechyElle
+            </a>
+            <a id="email-link" class="button button-ghost" href="mailto:pciellemae@gmail.com">
+              Email Me
+            </a>
+            <a class="button button-ghost" href="#projects">Repositories</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-grid">
+      <div class="primary-column">
+        <section class="panel reveal">
+          <div class="section-heading">
+            <h2>About</h2>
+          </div>
+          <div id="about" class="copy-block"></div>
+        </section>
+
+        <section class="panel reveal">
+          <div class="section-heading section-heading-inline">
+            <h2>Tech Stack &amp; Tools</h2>
+            <a class="section-link" href="#projects">Explore Projects</a>
+          </div>
+          <div id="tech-stack" class="tech-stack-list"></div>
+        </section>
+
+        <section id="projects" class="panel reveal">
+          <div class="section-heading section-heading-inline">
+            <h2>Featured Repositories</h2>
+            <a
+              class="section-link"
+              href="https://github.com/TechyElle?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub &rarr;
+            </a>
+          </div>
+          <div id="projects-list" class="project-grid"></div>
+        </section>
+
+        <section class="two-column">
+          <section class="panel reveal">
+            <div class="section-heading section-heading-inline">
+              <h2>Certifications</h2>
+              <a class="section-link" href="#contact">View All</a>
+            </div>
+            <div id="certifications-list" class="certification-list"></div>
+          </section>
+
+          <section class="panel reveal">
+            <div class="section-heading">
+              <h2>Recommendations</h2>
+            </div>
+            <div id="recommendations" class="recommendation-carousel"></div>
+          </section>
+        </section>
+
+        <section id="gallery" class="panel reveal">
+          <div class="section-heading">
+            <h2>Visual Gallery</h2>
+          </div>
+          <div id="gallery-grid" class="gallery-grid"></div>
+        </section>
+
+        <section id="contact" class="panel footer-panel reveal">
+          <div class="footer-grid">
+            <div class="footer-column">
+              <h3>Affiliations</h3>
+              <div id="organizations" class="link-list"></div>
+            </div>
+
+            <div class="footer-column">
+              <h3>Social Links</h3>
+              <div id="socials" class="link-list"></div>
+            </div>
+
+            <div class="footer-column">
+              <h3>Speaking &amp; Tech</h3>
+              <p class="footer-copy">
+                Available for speaking engagements, hackathons, and
+                open-source collaborations.
+              </p>
+              <a class="footer-inline-link" href="mailto:pciellemae@gmail.com">
+                Get in touch &rarr;
+              </a>
+            </div>
+
+            <div class="footer-column">
+              <h3>Direct Channels</h3>
+              <div id="contact-actions" class="contact-link-list"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidebar-column">
+        <section class="panel access-panel reveal">
+          <div class="access-card">
+            <div class="access-mark" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="access-headline">
+              <p>ENGINEERING ID</p>
+              <span>TECHYELLE PASS</span>
+            </div>
+
+            <div class="access-avatar-frame">
+              <img
+                class="access-avatar-img"
+                src="assets/profile-photo.png"
+                alt="Cielle Mae Peñamora profile photo"
+              >
+            </div>
+
+            <div class="access-meta">
+              <p class="access-label">ENGINEER / CREATOR</p>
+              <p class="access-name">CIELLE MAE</p>
+            </div>
+
+            <div class="access-footer">
+              <div>
+                <p class="access-role">FRONTEND &amp; AI</p>
+              </div>
+              <div class="access-qr" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+          <div class="membership-banner">
+            <strong>POLYTECHNIC UNIV. OF THE PHILIPPINES</strong>
+            <span>BS Computer Engineering specialization in Software Dev.</span>
+          </div>
+        </section>
+
+        <section class="panel reveal">
+          <div class="section-heading">
+            <h2>Experience &amp; Milestones</h2>
+          </div>
+          <div id="experience" class="stack-list"></div>
+        </section>
+      </aside>
+    </section>
+
+    <footer class="site-footer reveal">
+      <p>
+        &copy; 2026 Cielle Mae Pe&ntilde;amora (@TechyElle).
+        Built with semantic HTML, CSS &amp; JS.
+      </p>
+    </footer>
+  </main>
+
+  <script type="module" src="js/ui-engine.js"></script>
+</body>
+</html>
