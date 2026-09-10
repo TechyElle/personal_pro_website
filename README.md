@@ -2,17 +2,7 @@
   <img src="https://img.shields.io/badge/✦_Cielle_Mae_Peñamora-Software_Engineer_%26_Frontend_Dev-6366F1?style=for-the-badge&logoColor=white" alt="Cielle Mae Peñamora Badge" />
 </p>
 
-<div align="center">
-
-```text
-  ____ _      _ _        __  __
- / ___(_) ___| | | ___  |  \/  | __ _  ___
-| |   | |/ _ \ | |/ _ \ | |\/| |/ _` |/ _ \
-| |___| |  __/ | |  __/ | |  | | (_| |  __/
- \____|_|\___|_|_|\___| |_|  |_|\__,_|\___|
-```
-
-</div>
+<div align="center"></div>
 
 <h1 align="center">✦ Cielle Mae Peñamora</h1>
 
