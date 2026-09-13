@@ -1,40 +1,38 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/✦_Cielle_Mae_Peñamora-Software_Engineer_%26_Frontend_Dev-6366F1?style=for-the-badge&logoColor=white" alt="Cielle Mae Peñamora Badge" />
+  <img src="https://img.shields.io/badge/✦_Cielle_Mae_C._Peñamora-Full_Stack_Dev_%26_IT_Support-6366F1?style=for-the-badge&logoColor=white" alt="Cielle Mae C. Peñamora Badge" />
+  <a href="docs/cielle-mae-penamora-resume.pdf" target="_blank"><img src="https://img.shields.io/badge/📄_Resume-View_PDF-7E3ACE?style=for-the-badge&logoColor=white" alt="View Resume" /></a>
 </p>
 
 <div align="center"></div>
 
-<h1 align="center">✦ Cielle Mae Peñamora</h1>
+<h1 align="center">✦ Cielle Mae C. Peñamora</h1>
 
 <p align="center">
-  <strong>Software Engineer</strong> &bull; <strong>Frontend Developer</strong> &bull; <strong>Content Creator</strong><br>
-  Based in Metro Manila, Philippines 🇵🇭
+  <strong>Full Stack Developer</strong> &bull; <strong>IT Support Specialist</strong> &bull; <strong>Maritime IT &amp; Systems Specialist</strong><br>
+  📍 Based in Sampaloc, Manila, Philippines
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white" alt="Vue.js" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Windows_OS-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows OS" />
+  <img src="https://img.shields.io/badge/Hardware_Diagnostics-7E3ACE?style=flat-square&logoColor=white" alt="Hardware Diagnostics" />
+  <img src="https://img.shields.io/badge/Networking-LAN_/_Wi--Fi-238636?style=flat-square&logoColor=white" alt="Networking" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" />
-  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-web-services&logoColor=white" alt="AWS" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/MS_Office-D83B01?style=flat-square&logo=microsoftoffice&logoColor=white" alt="MS Office" />
+  <img src="https://img.shields.io/badge/Adobe_Premiere-9999FF?style=flat-square&logo=adobepremierepro&logoColor=white" alt="Adobe Premiere" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Founding_Member-blue?style=flat-square&logo=codepen" alt="PH100 Status" />
-  <img src="https://img.shields.io/badge/AI-Specialist-green?style=flat-square&logo=openai" alt="AI Specialist" />
-  <img src="https://img.shields.io/badge/Community-200k%2B_Developers-8A2BE2?style=flat-square" alt="Community" />
-  <img src="https://img.shields.io/badge/Education-BS_Computer_Engineering-orange?style=flat-square" alt="Education" />
+  <img src="https://img.shields.io/badge/Education-BS_CpE_(Web_%26_Mobile)-orange?style=flat-square" alt="Education" />
+  <img src="https://img.shields.io/badge/Target_Role-Full_Stack_%26_IT_Support-blue?style=flat-square" alt="Target Role" />
+  <img src="https://img.shields.io/badge/PUP_Manila-Expected_2028-green?style=flat-square" alt="PUP Manila" />
+  <img src="https://img.shields.io/badge/Certified-DataCamp_%26_CS50P-8A2BE2?style=flat-square" alt="Certifications" />
 </p>
 
 <p align="center">
@@ -42,138 +40,110 @@
 </p>
 
 <p align="center">
-  <a href="#-system-status-online">System Status</a> •
-  <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-featured-projects">Featured Projects</a> •
-  <a href="#-achievements--certifications">Achievements</a> •
-  <a href="#-system-report">System Report</a> •
-  <a href="#-deployment">Deployment</a> •
+  <a href="docs/cielle-mae-penamora-resume.pdf" target="_blank"><strong>📄 View Resume (PDF)</strong></a> •
+  <a href="#-career-objective">Career Objective</a> •
+  <a href="#-skills--competencies">Skills</a> •
+  <a href="#-work-experience">Experience</a> •
+  <a href="#-featured-projects">Projects</a> •
+  <a href="#-education--certifications">Education & Certifications</a> •
   <a href="#-connect-with-me">Connect</a>
 </p>
 
 ---
 
-## 🟢 System Status: Online
+## 🟢 Career Objective
 
 ```bash
 $ whoami
 ```
 
-I'm a full-stack software engineer specializing in developing solutions with **JavaScript**, **Python**, and **PHP**. I focus on building modern web applications, AI integration, and making technical knowledge accessible to a community of over **200,000 developers**.
+Third-year Computer Engineering student at Polytechnic University of the Philippines (PUP Manila) specializing in Web & Mobile Systems, working across Full Stack Development and IT Support.
 
-> 💡 Lately, I've been diving deeper into **Artificial Intelligence**, focusing on integrating generative AI tools to optimize development workflows and deliver cutting-edge technology.
+Brings hands-on experience diagnosing and resolving hardware and software issues, maintaining Windows systems, configuring networks (LAN, Wi-Fi, IP configuration), and providing dependable technical support to end users in high-turnaround and collaborative environments. Actively open to Full Stack Engineering and IT Support roles, pursuing a dedicated career pathway toward Cruise Ship IT Officer and maritime systems operations where mission-critical systems reliability, 24/7 network uptime, and proactive hardware upkeep are essential.
 
 ---
 
-## 🛠 Tech Stack
+## 🛠 Skills & Competencies
 
-| Category | Technologies |
-|:---------|:-------------|
-| 🎨 **Frontend** | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white) ![Tailwind_CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)<br/>`JavaScript` `TypeScript` `React` `Next.js` `Vue.js` `Tailwind CSS` |
-| ⚙️ **Backend** | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)<br/>`Node.js` `Python` `PHP` `Laravel` `PostgreSQL` `MongoDB` |
-| ☁️ **DevOps** | ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-web-services&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white) ![GitHub_Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)<br/>`AWS` `Docker` `Kubernetes` `GitHub Actions` |
+| Category | Areas of Expertise |
+|:---------|:-------------------|
+| 🔧 **IT Support & Troubleshooting** | Hardware & software diagnostics, preventive maintenance (desktops, laptops, printers, peripherals), walk-in & end-user technical support. |
+| 💻 **Systems & Software Maintenance** | Windows OS installation, configuration, and updates; MS Office suite; development-environment and device setup and upkeep; IT activity logging. |
+| 🌐 **Networking Fundamentals & Security** | LAN/Wi-Fi/internet troubleshooting, basic cabling and IP configuration, familiarity with routers, switches, and access points; Git/GitHub version-control best practices; backup & access configuration records. |
+| 🧰 **Tools & Platforms** | Windows OS, MS Office, Git/GitHub, Adobe Premiere, React, TypeScript, PHP, MySQL, Node.js/Express, Python. |
+| 🤝 **Client & Team Support** | Walk-in client service, following supervisor instructions, cross-functional teamwork, technical documentation; English (Fluent), Filipino (Native). |
+
+---
+
+## 💼 Work Experience
+
+* **Document Services & Large Format Production Assistant** (2026)  
+  *KNJ Printing — School/Office Publishing Services*  
+  * Set up, operated, and troubleshot printing and binding equipment for daily walk-in requests, diagnosing hardware faults and resolving them on the spot to keep same-day turnaround on track.  
+  * Maintained and configured large-format printing hardware for tarpaulins, vinyl stickers, standees, wall murals, posters, backlit displays, and vehicle wraps.  
+  * Edited sermon recordings in Adobe Premiere, applying software proficiency to a real production workflow.
+
+* **Team Leader, Full Stack** (2025 – 2026)  
+  *Xontrix — Integrated Electronics E-Commerce & AI-Powered Business Management Platform*  
+  * Set up, configured, and maintained development environments and devices across the team, resolving hardware and software issues to keep workflows on schedule.  
+  * Maintained version control standards (Git/GitHub) with backups and a traceable file structure, and documented technical issues, configurations, and resolutions for team reference.
+
+* **President** (2025 – 2026)  
+  *PUP Seeds of the Nations (PUP SONS)*  
+  * Coordinated with an external IT Consultant from Deloitte to plan and run a Python Mentorship Workshop, managing logistics and stakeholder communication.  
+  * Led timelines and communication across officer committees for technical and community initiatives.  
+  * Scoped requirements and documentation for Harvest, an automated member-tracking platform, bridging operational and technical needs.
 
 ---
 
 ## 🚀 Featured Projects
 
-| Project | Description | Link |
-|:--------|:------------|:----:|
-| 📜 **CodeCred** | Online certifications for programmers. | [Visit Site ↗](https://codecred.dev) |
-| 💻 **BASE404** | Online coding bootcamp. | [Visit Site ↗](https://base-404.com) |
-| 👗 **DIIN.PH** | AI-powered wardrobe assistant. | [Visit Site ↗](https://diin.ph) |
-| ⚡ **DYNAMIS** | AI-powered workout tracker. | [Visit Site ↗](https://dynamis-app.online) |
+| Project | Description | Stack / Focus |
+|:--------|:------------|:-------------:|
+| 🔬 **SafeBite** | Harvard CS50P Final Project: Food safety bacteria scanner detecting growth using computer vision. Tested across diverse hardware environments. | `Python` `PyQt6` `OpenCV` |
+| ⚡ **Xontrix** | Integrated electronics e-commerce and AI-powered business management platform. Led dev environment setup and Git version control. | `TypeScript` `React` `Node.js` |
+| 🌾 **Harvest** | Automated member-tracking platform for PUP SONS; bridging operational and technical needs with complete requirement documentation. | `Python` `JavaScript` `SQL` |
+| 🧩 **Workflow Builder** | Interactive workflow canvas and visual orchestrator for autonomous AI agents. | `JavaScript` `CSS3` `Workflows` |
+| 🤖 **BotWizer** | Computer vision-powered interaction bot. Awarded Gold Student Choice Award. | `Python` `OpenCV` `Automation` |
 
 ---
 
-## 🏆 Achievements & Certifications
+## 🏆 Education & Certifications
 
-| Recognition / Credential | Highlights & Details |
-|:-------------------------|:---------------------|
-| 🌟 **PH100 Member** | Recognized as one of the brightest minds under 30 in the Philippines. |
-| 🌐 **Industry Leadership** | **Huawei Developer Expert** &bull; **Google Gen AI Leader** |
-| 📜 **Certifications & Alumni** | **Oracle Gen AI Professional** &bull; **CS50x Alumni** |
+### Education
+* **Polytechnic University of the Philippines** — BS Computer Engineering, Web & Mobile Systems Specialization (Expected 2028)
+* **Northern Quezon College Incorporation** — ABM Strand (With High Honors, Class & Batch President)
+* **Infanta National High School** — Special Program in the Arts (Visual Arts) (With High Honors)
 
----
-
-## 📊 System Report
-
-| Metric / Category | Details |
-|:------------------|:--------|
-| 🎓 **Experience** | 2024 Graduate (BS Computer Engineering) from PUP Manila. |
-| 👥 **Community** | Founder/Leader of a developer community with 200k+ members. |
-| 🎤 **Speaking** | Available for talks on Software Dev & Emerging Tech. |
-
----
-
-## 🚀 Deployment
-
-This project is configured for one-click deployment on [Vercel](https://vercel.com).
-
-### Option 1: One-Click Deploy
-Click the button below to fork/clone and deploy your own copy to Vercel instantly:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTechyElle%2Fpersonal_pro_website)
-
-### Option 2: Import Git Repository via Vercel Dashboard
-1. Push this project to your GitHub, GitLab, or Bitbucket account:
-   ```bash
-   git add .
-   git commit -m "feat: initial commit with Vercel deployment support"
-   git remote add origin https://github.com/<your-username>/personal_pro_website.git
-   git push -u origin main
-   ```
-2. Navigate to [Vercel New Project Dashboard](https://vercel.com/new).
-3. Under **Import Git Repository**, choose your repository and click **Import**.
-4. In the Project Configuration screen:
-   - **Framework Preset:** `Other` (or leave default)
-   - **Root Directory:** `./`
-   - **Build & Output Settings:** Leave default (no build step needed)
-5. Click **Deploy**. Your portfolio will be live in seconds with custom domain support and SSL!
-
-### Option 3: Deploy via Vercel CLI
-Deploy directly from your terminal using the Vercel CLI:
-```bash
-# Preview deployment
-npx vercel
-
-# Production deployment
-npx vercel --prod
-```
-
-### Option 4: Local Preview
-Run the site locally with full ES module support:
-```bash
-npm run dev
-# or
-npx serve .
-```
+### Certifications & Awards
+* **AI Fundamentals** — DataCamp (May 2026)
+* **Data Literacy** — DataCamp (May 2026)
+* **AI-Powered Project Manager Masterclass** (Dec 2025)
+* **School of Leaders 1** — Most Outstanding Awardee
+* **CS50P: Computer Science with Python** — Harvard University
 
 ---
 
 ## 🔗 Connect with me
 
 <p align="center">
-  <a href="https://linkedin.com" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://github.com" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="https://instagram.com" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-  <a href="mailto:cmpenamora@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="docs/cielle-mae-penamora-resume.pdf" target="_blank"><img src="https://img.shields.io/badge/Resume-PDF_Download-7E3ACE?style=for-the-badge&logoColor=white" alt="Resume" /></a>
+  <a href="https://linkedin.com/in/ms-ciellepeñamora" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://github.com/TechyElle" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="tel:09075825520"><img src="https://img.shields.io/badge/Phone-0907_582_5520-238636?style=for-the-badge&logoColor=white" alt="Phone" /></a>
+  <a href="mailto:penamoraciellemae@gmail.com"><img src="https://img.shields.io/badge/Email-penamoraciellemae%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com"><strong>LinkedIn</strong></a> •
-  <a href="https://github.com"><strong>GitHub</strong></a> •
-  <a href="https://instagram.com"><strong>Instagram</strong></a> •
-  <a href="mailto:cmpenamora@gmail.com"><strong>Email</strong></a>
+  <a href="docs/cielle-mae-penamora-resume.pdf" target="_blank"><strong>Resume (PDF)</strong></a> •
+  <a href="https://linkedin.com/in/ms-ciellepeñamora"><strong>LinkedIn</strong></a> •
+  <a href="https://github.com/TechyElle"><strong>GitHub</strong></a> •
+  <a href="mailto:penamoraciellemae@gmail.com"><strong>Email</strong></a> •
+  <a href="tel:09075825520"><strong>0907 582 5520</strong></a>
 </p>
 
 ---
 
 <p align="center">
-  <i>"I've helped startups and MSMEs grow and streamline their processes through software solutions."</i>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Founding_Member-blue?style=for-the-badge&logo=codepen" alt="PH100 Status" />
-  <img src="https://img.shields.io/badge/AI-Specialist-green?style=for-the-badge&logo=openai" alt="AI Specialist" />
+  <i>"Passionate about IT systems, hardware diagnostics, and empowering teams through reliable technical infrastructure."</i>
 </p>

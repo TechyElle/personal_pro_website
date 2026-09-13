@@ -19,109 +19,218 @@ export class PortfolioDataHolder {
     this.organizations = initialData.organizations || [];
     this.socials = initialData.socials || [];
     this.contactLinks = initialData.contactLinks || [];
+    this.contactChannels = initialData.contactChannels || [];
     this.gallery = initialData.gallery || [];
   }
 }
 
 // static configuration dataset decoupled from view logic
 export const portfolioConfig = new PortfolioDataHolder({
-  name: "Cielle Mae Peñamora",
+  name: "Cielle Mae C. Peñamora",
   handle: "@TechyElle",
-  location: "Philippines 🇵🇭",
+  location: "📍 Sampaloc, Manila, Philippines",
   roles: [
-    "Computer Engineering Student",
-    "Filipina Frontend Dev",
-    "Problem Solver & Lifetime Learner",
+    "Full Stack Developer",
+    "IT Support Specialist",
+    "Maritime IT & Systems Specialist",
+    "BS Computer Engineering (PUP)",
   ],
   typingPhrases: [
     "I'm Elle",
-    "She/her",
-    "Computer Engineering Student",
-    "Filipina Frontend Dev",
-    "Cat Lover :3",
+    "Full Stack Developer",
+    "IT Support Specialist",
+    "Maritime IT & Systems Specialist",
+    "Computer Engineering @ PUP Manila",
+    "Hardware & Software Diagnostics",
+    "Systems & Network Maintenance",
+    "Web & Mobile Systems",
   ],
   achievements: [
     "BS Computer Engineering",
-    "PUP Manila",
-    "CS50x Alumni",
-    "Huawei Developer Expert",
+    "PUP Manila (Expected 2028)",
+    "Harvard CS50P Alum",
+    "DataCamp Certified",
+    "School of Leaders 1 Awardee",
   ],
   funBadges: [
-    { label: "gluten-free", theme: "badge-purple" },
-    { label: "contains-cat-gifs", theme: "badge-pink" },
-    { label: "powered-by-electricity", theme: "badge-cyan" },
+    { label: "full-stack-dev", theme: "badge-purple" },
+    { label: "it-support-ready", theme: "badge-cyan" },
+    { label: "maritime-it-systems", theme: "badge-pink" },
+    { label: "systems-troubleshooter", theme: "badge-blue" },
   ],
   about: [
-    "I'm a Computer Engineering student and software engineer " +
-      "based in the Philippines, focused on frontend engineering, " +
-      "intuitive UI architecture, and artificial intelligence.",
-    "Driven by curiosity and continuous learning, I build " +
-      "accessible web applications, explore agentic AI workflows, " +
-      "and develop computer vision systems that tackle real-world " +
-      "challenges.",
-    "Active on GitHub as @TechyElle, I share open-source code " +
-      "suites, modern frontend experiments, and tutorials to help " +
-      "fellow developers level up their skills.",
+    "Third-year Computer Engineering student at Polytechnic University " +
+      "of the Philippines (PUP Manila) specializing in Web & Mobile Systems, " +
+      "driven by a strong passion for Full Stack Development and IT Support.",
+    "Brings hands-on experience diagnosing and resolving hardware and " +
+      "software issues, maintaining Windows systems, configuring networks " +
+      "(LAN, Wi-Fi, IP configuration), and providing dependable technical " +
+      "support to end users in high-turnaround and collaborative environments.",
+    "Actively open to Full Stack Engineering and IT Support roles, pursuing " +
+      "a dedicated career pathway toward Cruise Ship IT Officer and maritime " +
+      "systems operations where mission-critical systems reliability, 24/7 " +
+      "network uptime, and proactive hardware upkeep are essential.",
   ],
   experience: [
     {
       title:
-        "BS Computer Engineering (Software Development)",
+        "Document Services & Large Format Production Assistant",
       company:
-        "Polytechnic University of the Philippines - Manila",
-      year: "2024 - Present",
+        "KNJ Printing — School/Office Publishing Services",
+      year: "2026",
+      details: [
+        "Set up, operated, and troubleshot printing and binding " +
+          "equipment for daily walk-in requests, diagnosing hardware " +
+          "faults and resolving them on the spot to keep same-day " +
+          "turnaround on track.",
+        "Maintained and configured large-format printing hardware for " +
+          "tarpaulins, vinyl stickers, standees, wall murals, posters, " +
+          "backlit displays, and vehicle wraps.",
+        "Edited sermon recordings in Adobe Premiere, applying software " +
+          "proficiency to a real production workflow.",
+      ],
     },
     {
-      title: "BS Information Technology",
+      title: "Team Leader, Full Stack",
       company:
-        "National University of the Philippines - Manila",
-      year: "2023 - 2024",
+        "Xontrix — Electronics E-Commerce & AI Business Management",
+      year: "2025 - 2026",
+      details: [
+        "Set up, configured, and maintained development environments " +
+          "and devices across the team, resolving hardware and software " +
+          "issues to keep workflows on schedule.",
+        "Maintained version control standards (Git/GitHub) with backups " +
+          "and a traceable file structure, documenting technical " +
+          "issues and resolutions for team reference.",
+      ],
     },
     {
-      title: "Hello World! 👋",
-      company: "Wrote first line of code & built first web app",
-      year: "2023",
+      title: "President",
+      company: "PUP Seeds of the Nations (PUP SONS)",
+      year: "2025 - 2026",
+      details: [
+        "Coordinated with an external IT Consultant from Deloitte to " +
+          "plan and run a Python Mentorship Workshop, managing logistics " +
+          "and stakeholder communication.",
+        "Led timelines and communication across officer committees for " +
+          "technical and community initiatives.",
+        "Scoped requirements and documentation for Harvest, an " +
+          "automated member-tracking platform, bridging operational " +
+          "and technical needs.",
+      ],
+    },
+    {
+      title: "BS Computer Engineering (Web & Mobile Systems)",
+      company: "Polytechnic University of the Philippines - Manila",
+      year: "Expected 2028",
+      details: [
+        "Third-year student specializing in Web & Mobile Systems.",
+      ],
+    },
+    {
+      title: "ABM Strand • Class & Batch President",
+      company: "Northern Quezon College Incorporation",
+      year: "With High Honors",
+      details: [
+        "Graduated With High Honors; served as Class and Batch President.",
+      ],
+    },
+    {
+      title: "Special Program in the Arts (Visual Arts)",
+      company: "Infanta National High School",
+      year: "With High Honors",
+      details: [
+        "Graduated With High Honors with specialization in Visual Arts.",
+      ],
     },
   ],
   techStack: {
-    frontend: [
-      "JavaScript",
+    itSupport: [
+      "Hardware Diagnostics",
+      "Software Troubleshooting",
+      "Preventive Maintenance",
+      "Desktop & Laptop Care",
+      "Printer Maintenance",
+      "Walk-in Client Support",
+    ],
+    systemsMaintenance: [
+      "Windows OS Installation",
+      "OS Updates & Config",
+      "MS Office Suite",
+      "Dev Environment Setup",
+      "Device Upkeep & Provisioning",
+      "IT Activity Logging",
+    ],
+    networkingSecurity: [
+      "LAN / Wi-Fi Troubleshooting",
+      "Basic Cabling",
+      "IP Configuration",
+      "Routers, Switches & APs",
+      "Git / GitHub Version Control",
+      "Access & Backup Records",
+    ],
+    toolsPlatforms: [
+      "Windows OS",
+      "MS Office",
+      "Git / GitHub",
+      "Adobe Premiere",
+      "React",
       "TypeScript",
-      "ReactJS",
-      "HTML5",
-      "CSS3",
-      "Next.js",
-      "Vue.js",
-      "Tailwind CSS",
-    ],
-    backend: [
-      "Python",
-      "Node.js",
-      "C",
       "PHP",
-      "Laravel",
-      "PostgreSQL",
+      "MySQL",
+      "Node.js / Express",
+      "Python",
     ],
-    devops: [
-      "GitHub Actions",
-      "Docker",
-      "Git",
-      "Linux",
-      "AWS",
+    clientTeam: [
+      "Walk-in Client Service",
+      "Cross-Functional Teamwork",
+      "Technical Documentation",
+      "English (Fluent)",
+      "Filipino (Native)",
     ],
   },
   projects: [
     {
-      title: "aipowered_e-commerce_webapp",
+      title: "safebite_bacteria_scanner",
       description:
-        "Modern intelligent e-commerce platform with automated " +
-        "recommendations and dynamic UI flows.",
+        "Harvard CS50P Final Project. Built and tested a Python, " +
+        "PyQt6, and OpenCV application, including complete installation, " +
+        "configuration, and troubleshooting across dev environments.",
+      language: "Python",
+      languageColor: "#3572A5",
+      tags: ["Python", "PyQt6", "OpenCV"],
+      link: "https://github.com/TechyElle/food_safety_bacteria_scanner",
+      branch: "main",
+      stars: "0",
+      forks: "0",
+    },
+    {
+      title: "xontrix_ecommerce_platform",
+      description:
+        "Integrated electronics e-commerce and AI business platform. " +
+        "Maintained development environments, Git/GitHub standards, and " +
+        "documented technical resolutions across the engineering team.",
       language: "TypeScript",
       languageColor: "#3178c6",
+      tags: ["TypeScript", "React", "Node.js"],
       link: "https://github.com/TechyElle/aipowered_e-commerce_webapp",
       branch: "main",
       stars: "0",
       forks: "1",
+    },
+    {
+      title: "harvest_member_tracker",
+      description:
+        "Automated member-tracking platform for PUP SONS. Scoped " +
+        "requirements and technical documentation bridging operational " +
+        "and technical needs.",
+      language: "Python / JS",
+      languageColor: "#3572A5",
+      tags: ["Python", "JavaScript", "SQL"],
+      link: "https://github.com/TechyElle",
+      branch: "main",
+      stars: "0",
+      forks: "0",
     },
     {
       title: "ai_agent_workflow_builder",
@@ -130,31 +239,8 @@ export const portfolioConfig = new PortfolioDataHolder({
         "for autonomous AI agents.",
       language: "CSS / JS",
       languageColor: "#563d7c",
+      tags: ["JavaScript", "CSS3", "Workflows"],
       link: "https://github.com/TechyElle/ai_agent_workflow_builder",
-      branch: "main",
-      stars: "0",
-      forks: "0",
-    },
-    {
-      title: "food_safety_bacteria_scanner",
-      description:
-        "Computer vision image detection pipeline scanning and " +
-        "identifying bacterial growth for food safety.",
-      language: "Python",
-      languageColor: "#3572A5",
-      link: "https://github.com/TechyElle/food_safety_bacteria_scanner",
-      branch: "main",
-      stars: "0",
-      forks: "0",
-    },
-    {
-      title: "mood_cafe_website",
-      description:
-        "Aesthetic interactive coffee lounge website with cozy " +
-        "soundtracks, ambient UI, and responsive menus.",
-      language: "HTML",
-      languageColor: "#e34c26",
-      link: "https://github.com/TechyElle/mood_cafe_website",
       branch: "main",
       stars: "0",
       forks: "0",
@@ -166,79 +252,129 @@ export const portfolioConfig = new PortfolioDataHolder({
         "human interactions. Gold Student Choice Award winner.",
       language: "Python",
       languageColor: "#3572A5",
+      tags: ["Python", "OpenCV", "Automation"],
       link: "https://github.com/TechyElle/botwizer",
       branch: "master",
-      stars: "0",
-      forks: "0",
-    },
-    {
-      title: "CodeCred",
-      description:
-        "Online developer certification registry and skills " +
-        "verification platform.",
-      language: "TypeScript",
-      languageColor: "#3178c6",
-      link: "https://codecred.dev",
-      branch: "main",
       stars: "0",
       forks: "0",
     },
   ],
   certifications: [
     {
-      name: "Huawei Developer Expert",
-      issuer: "Huawei",
+      name: "AI Fundamentals",
+      issuer: "DataCamp",
+      date: "May 2026",
+      category: "AI & Data",
     },
     {
-      name: "Generative AI Leader",
-      issuer: "Google",
+      name: "Data Literacy",
+      issuer: "DataCamp",
+      date: "May 2026",
+      category: "AI & Data",
     },
     {
-      name: "Software Engineering",
-      issuer: "TestDome",
+      name: "AI-Powered Project Manager Masterclass",
+      issuer: "Masterclass",
+      date: "Dec 2025",
+      category: "Project Management",
     },
     {
-      name: "Generative AI Professional",
-      issuer: "Oracle",
+      name: "School of Leaders 1",
+      issuer: "Most Outstanding Awardee",
+      date: "Honors",
+      category: "Leadership & Honors",
+    },
+    {
+      name: "CS50P: Programming with Python",
+      issuer: "Harvard University",
+      date: "CS50x Alum",
+      category: "Computer Science",
     },
   ],
-  recommendations: [
-    {
-      text:
-        "Cielle is an exceptionally driven software engineer with " +
-        "a sharp eye for detail. She tackles complex problems with " +
-        "clarity and brings infectious energy to technical projects.",
-      author: "Cris Lawrence Adrian Militante",
-      position: "ICT Director at GCM",
-    },
-    {
-      text:
-        "Intelligent software engineer and proactive collaborator. " +
-        "Cielle delivers polished interfaces and leads teams with " +
-        "empathy and confidence.",
-      author: "Ken Gorro",
-      position: "Senior Developer at Fullscale",
-    },
-    {
-      text:
-        "Equipped with modern engineering standards and deep " +
-        "curiosity, Elle consistently turns technical concepts into " +
-        "delightful user experiences.",
-      author: "Patrick Vince Velasco",
-      position: "Software Engineer, YNS",
-    },
-  ],
+  recommendations: [],
   organizations: [
     {
+      name: "PUP Seeds of the Nations (PUP SONS)",
+      role: "President",
+      category: "Student Organization • PUP Manila",
+      badgeType: "accent",
+      url: "https://github.com/TechyElle",
+    },
+    {
+      name: "Deloitte Python Mentorship Workshop",
+      role: "Technical Partner",
+      category: "Industry Mentorship & Training",
+      badgeType: "blue",
+      url: "https://github.com/TechyElle",
+    },
+    {
       name: "Junior Philippine Computer Society",
+      role: "Member",
+      category: "National Student Computing Society",
+      badgeType: "green",
       url: "https://jpcs.org",
     },
     {
       name: "Data Engineering Pilipinas",
+      role: "Community Member",
+      category: "Philippine Data Community",
+      badgeType: "purple",
       url: "https://www.facebook.com/groups/dataengineeringph",
     },
   ],
+  contactChannels: [
+    {
+      id: "email",
+      label: "Email",
+      value: "penamoraciellemae@gmail.com",
+      url: "mailto:penamoraciellemae@gmail.com",
+      badge: "Primary",
+      icon: "mail",
+      canCopy: true,
+    },
+    {
+      id: "linkedin",
+      label: "LinkedIn",
+      value: "in/ms-ciellepeñamora",
+      url: "https://www.linkedin.com/in/ms-ciellepe%C3%B1amora",
+      badge: "Network",
+      icon: "linkedin",
+      canCopy: false,
+    },
+    {
+      id: "github",
+      label: "GitHub",
+      value: "@TechyElle",
+      url: "https://github.com/TechyElle",
+      badge: "Code & Repos",
+      icon: "github",
+      canCopy: false,
+    },
+    {
+      id: "phone",
+      label: "Mobile / Phone",
+      value: "0907 582 5520",
+      url: "tel:09075825520",
+      badge: "Direct Line",
+      icon: "phone",
+      canCopy: true,
+    },
+    {
+      id: "resume",
+      label: "Official Resume",
+      value: "cielle-mae-penamora-resume.pdf",
+      url: "docs/cielle-mae-penamora-resume.pdf",
+      badge: "PDF / CV",
+      icon: "resume",
+      canCopy: false,
+    },
+  ],
   socials: [
+    {
+      label: "Resume (PDF)",
+      url: "docs/cielle-mae-penamora-resume.pdf",
+      meta: "Official Resume / CV",
+    },
     {
       label: "GitHub",
       url: "https://github.com/TechyElle",
@@ -247,29 +383,39 @@ export const portfolioConfig = new PortfolioDataHolder({
     {
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/ms-ciellepe%C3%B1amora",
-      meta: "in/Cielle Mae Peñamora",
+      meta: "in/ms-ciellepeñamora",
     },
     {
       label: "Email",
-      url: "mailto:pciellemae@gmail.com",
-      meta: "pciellemae@gmail.com",
+      url: "mailto:penamoraciellemae@gmail.com",
+      meta: "penamoraciellemae@gmail.com",
     },
   ],
   contactLinks: [
     {
       label: "Email Me",
-      meta: "pciellemae@gmail.com",
-      url: "mailto:pciellemae@gmail.com",
+      meta: "penamoraciellemae@gmail.com",
+      url: "mailto:penamoraciellemae@gmail.com",
+    },
+    {
+      label: "Download / View Resume",
+      meta: "cielle-mae-penamora-resume.pdf",
+      url: "docs/cielle-mae-penamora-resume.pdf",
+    },
+    {
+      label: "Mobile / Phone",
+      meta: "0907 582 5520",
+      url: "tel:09075825520",
+    },
+    {
+      label: "LinkedIn Profile",
+      meta: "in/ms-ciellepeñamora",
+      url: "https://www.linkedin.com/in/ms-ciellepe%C3%B1amora",
     },
     {
       label: "GitHub Profile",
       meta: "github.com/TechyElle",
       url: "https://github.com/TechyElle",
-    },
-    {
-      label: "LinkedIn Profile",
-      meta: "in/Cielle Mae Peñamora",
-      url: "https://www.linkedin.com/in/ms-ciellepe%C3%B1amora",
     },
   ],
   gallery: [

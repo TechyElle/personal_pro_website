@@ -5,7 +5,7 @@ export class UiEngine {
   // manages runtime event handlers, dom hydration, and dynamic state
   constructor(dataModel) {
     this.model = dataModel;
-    this.themeStorageKey = "portfolio-theme";
+    this.themeStorageKey = "portfolio-theme-v3";
     this.recommendationTimer = null;
     this.activeRecommendationIndex = 0;
     this.typingTimer = null;
@@ -27,13 +27,15 @@ export class UiEngine {
       this.renderTechStackGroups();
       this.renderFeaturedProjects();
       this.renderCertifications();
-      this.renderRecommendations();
-      this.renderLinkCollection(
-        this.model.organizations,
-        "organizations"
-      );
-      this.renderLinkCollection(this.model.socials, "socials");
-      this.renderContactActions();
+      if (
+        Array.isArray(this.model.recommendations) &&
+        this.model.recommendations.length > 0
+      ) {
+        this.renderRecommendations();
+      }
+      this.renderAffiliations();
+      this.renderContactChannels();
+      this.setupClipboardHandlers();
       this.renderGalleryGrid();
     } catch (initializationError) {
       console.error(
@@ -94,7 +96,12 @@ export class UiEngine {
         Array.isArray(this.model.contactLinks) &&
         this.model.contactLinks.length > 0
       ) {
-        emailElement.href = this.model.contactLinks[0].url;
+        const mailLink = this.model.contactLinks.find((item) =>
+          item.url.startsWith("mailto:")
+        );
+        if (mailLink) {
+          emailElement.href = mailLink.url;
+        }
       }
     } catch (headerHydrationError) {
       console.error(
@@ -282,6 +289,23 @@ export class UiEngine {
 
         copyWrapper.appendChild(titleNode);
         copyWrapper.appendChild(companyNode);
+
+        if (Array.isArray(historyItem.details)) {
+          const detailsList = this.createUiNode(
+            "ul",
+            "stack-details"
+          );
+          historyItem.details.forEach((detailText) => {
+            const detailItem = this.createUiNode(
+              "li",
+              "stack-detail-item",
+              detailText
+            );
+            detailsList.appendChild(detailItem);
+          });
+          copyWrapper.appendChild(detailsList);
+        }
+
         itemArticle.appendChild(markerNode);
         itemArticle.appendChild(copyWrapper);
         itemArticle.appendChild(yearNode);
@@ -299,9 +323,22 @@ export class UiEngine {
     try {
       const container = document.getElementById("tech-stack");
       const categoryLabels = {
+        itSupport: "IT Support & Troubleshooting",
+        systemsMaintenance: "Systems & Software Maintenance",
+        networkingSecurity: "Networking Fundamentals & IT Security",
+        toolsPlatforms: "Tools & Platforms",
+        clientTeam: "Client & Team Support",
         frontend: "Frontend Architecture",
         backend: "Backend & Systems",
         devops: "DevOps, Cloud & Tooling",
+      };
+
+      const categoryIcons = {
+        itSupport: "🛠️",
+        systemsMaintenance: "💻",
+        networkingSecurity: "🌐",
+        toolsPlatforms: "⚡",
+        clientTeam: "🤝",
       };
 
       if (!container) {
@@ -314,10 +351,13 @@ export class UiEngine {
             "article",
             "tech-group"
           );
+          const iconPrefix = categoryIcons[groupKey]
+            ? `${categoryIcons[groupKey]} `
+            : "";
           const groupTitle = this.createUiNode(
             "h3",
-            "",
-            categoryLabels[groupKey] || groupKey
+            "tech-group-title",
+            `${iconPrefix}${categoryLabels[groupKey] || groupKey}`
           );
           const tagContainer = this.createUiNode(
             "div",
@@ -387,6 +427,28 @@ export class UiEngine {
           projectEntry.description
         );
 
+        projectCard.appendChild(cardHeader);
+        projectCard.appendChild(projectDescription);
+
+        if (
+          Array.isArray(projectEntry.tags) &&
+          projectEntry.tags.length > 0
+        ) {
+          const tagsWrapper = this.createUiNode(
+            "div",
+            "repo-tags-row"
+          );
+          projectEntry.tags.forEach((tagText) => {
+            const tagChip = this.createUiNode(
+              "span",
+              "repo-tech-tag",
+              tagText
+            );
+            tagsWrapper.appendChild(tagChip);
+          });
+          projectCard.appendChild(tagsWrapper);
+        }
+
         const metaRow = this.createUiNode("div", "repo-meta-row");
 
         if (projectEntry.language) {
@@ -421,17 +483,26 @@ export class UiEngine {
           metaRow.appendChild(branchBadge);
         }
 
-        if (projectEntry.forks) {
+        const forkCount = parseInt(projectEntry.forks, 10);
+        if (!isNaN(forkCount) && forkCount > 0) {
           const forksBadge = this.createUiNode(
             "span",
             "repo-stat",
-            `⌥ ${projectEntry.forks}`
+            `⌥ ${forkCount}`
           );
           metaRow.appendChild(forksBadge);
         }
 
-        projectCard.appendChild(cardHeader);
-        projectCard.appendChild(projectDescription);
+        const starCount = parseInt(projectEntry.stars, 10);
+        if (!isNaN(starCount) && starCount > 0) {
+          const starsBadge = this.createUiNode(
+            "span",
+            "repo-stat",
+            `★ ${starCount}`
+          );
+          metaRow.appendChild(starsBadge);
+        }
+
         projectCard.appendChild(metaRow);
         container.appendChild(projectCard);
       });
@@ -459,19 +530,42 @@ export class UiEngine {
           "article",
           "certification-item"
         );
+        const cardHeader = this.createUiNode("div", "cert-header");
         const nameNode = this.createUiNode(
           "strong",
-          "",
+          "cert-name",
           certificate.name
         );
+        cardHeader.appendChild(nameNode);
+
+        if (certificate.category) {
+          const categoryBadge = this.createUiNode(
+            "span",
+            "cert-category-badge",
+            certificate.category
+          );
+          cardHeader.appendChild(categoryBadge);
+        }
+
+        const metaRow = this.createUiNode("div", "cert-meta-row");
         const issuerNode = this.createUiNode(
           "span",
-          "",
+          "cert-issuer",
           certificate.issuer
         );
+        metaRow.appendChild(issuerNode);
 
-        itemArticle.appendChild(nameNode);
-        itemArticle.appendChild(issuerNode);
+        if (certificate.date) {
+          const dateNode = this.createUiNode(
+            "span",
+            "cert-date",
+            certificate.date
+          );
+          metaRow.appendChild(dateNode);
+        }
+
+        itemArticle.appendChild(cardHeader);
+        itemArticle.appendChild(metaRow);
         container.appendChild(itemArticle);
       });
     } catch (certificationsRenderError) {
@@ -486,10 +580,12 @@ export class UiEngine {
   renderRecommendations() {
     try {
       const container = document.getElementById("recommendations");
-      if (!container) {
-        throw new Error(
-          "Recommendations container node missing from DOM."
-        );
+      if (
+        !container ||
+        !Array.isArray(this.model.recommendations) ||
+        this.model.recommendations.length === 0
+      ) {
+        return;
       }
 
       const cardsWrap = this.createUiNode(
@@ -671,37 +767,378 @@ export class UiEngine {
     }
   }
 
-  // render generic navigational list of link elements
+  // return icon svg markup matching channel type
+  getChannelIconSvg(iconType) {
+    switch (iconType) {
+      case "mail":
+        return (
+          '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" ' +
+          'stroke="currentColor" stroke-width="2" stroke-linecap="round" ' +
+          'stroke-linejoin="round">' +
+          '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2' +
+          '-.9-2-2V6c0-1.1.9-2 2-2z"></path>' +
+          '<polyline points="22,6 12,13 2,6"></polyline></svg>'
+        );
+      case "linkedin":
+        return (
+          '<svg viewBox="0 0 24 24" width="18" height="18" ' +
+          'fill="currentColor">' +
+          '<path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2' +
+          '-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26' +
+          '-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93' +
+          'c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 ' +
+          '8.76a1.45 1.45 0 1 0-.01-2.9 1.45 1.45 0 0 0 .01 2.9m1.37 ' +
+          '9.74v-8.37H5.1v8.37h2.73z"></path></svg>'
+        );
+      case "github":
+        return (
+          '<svg viewBox="0 0 16 16" width="18" height="18" ' +
+          'fill="currentColor">' +
+          '<path d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 0 0 5.47 7.59c' +
+          '.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53' +
+          '-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01' +
+          '-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52' +
+          '.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59' +
+          '.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 ' +
+          '1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82' +
+          '.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 ' +
+          '3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 ' +
+          '0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z">' +
+          '</path></svg>'
+        );
+      case "phone":
+        return (
+          '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" ' +
+          'stroke="currentColor" stroke-width="2" stroke-linecap="round" ' +
+          'stroke-linejoin="round">' +
+          '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1' +
+          '-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07' +
+          '-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 ' +
+          '0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27' +
+          '-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 ' +
+          '22 16.92z"></path></svg>'
+        );
+      case "resume":
+      default:
+        return (
+          '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" ' +
+          'stroke="currentColor" stroke-width="2" stroke-linecap="round" ' +
+          'stroke-linejoin="round">' +
+          '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 ' +
+          '0 2-2V8z"></path>' +
+          '<polyline points="14 2 14 8 20 8"></polyline>' +
+          '<line x1="16" y1="13" x2="8" y2="13"></line>' +
+          '<line x1="16" y1="17" x2="8" y2="17"></line>' +
+          '</svg>'
+        );
+    }
+  }
+
+  // return action arrow or copy icon svg string
+  getActionIconSvg(iconType) {
+    if (iconType === "copy") {
+      return (
+        '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" ' +
+        'stroke="currentColor" stroke-width="2" stroke-linecap="round" ' +
+        'stroke-linejoin="round">' +
+        '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>' +
+        '<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 ' +
+        '2 2v1"></path></svg>'
+      );
+    }
+    return (
+      '<svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor">' +
+      '<path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 ' +
+      '4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06l2.97' +
+      '-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0' +
+      '-1.06z"></path></svg>'
+    );
+  }
+
+  // render direct contact channels with icons and quick actions
+  renderContactChannels() {
+    try {
+      const container = document.getElementById("contact-channels");
+      if (!container) {
+        return;
+      }
+
+      const channels =
+        Array.isArray(this.model.contactChannels) &&
+        this.model.contactChannels.length > 0
+          ? this.model.contactChannels
+          : [];
+
+      channels.forEach((channel) => {
+        const cardNode = this.createUiNode("div", "channel-card");
+
+        const iconWrap = this.createUiNode("div", "channel-icon-box");
+        iconWrap.innerHTML = this.getChannelIconSvg(channel.icon);
+
+        const bodyWrap = this.createUiNode("a", "channel-body");
+        bodyWrap.href = channel.url;
+        if (
+          channel.url.startsWith("http") ||
+          channel.url.endsWith(".pdf")
+        ) {
+          bodyWrap.target = "_blank";
+          bodyWrap.rel = "noopener noreferrer";
+        }
+
+        const topRow = this.createUiNode("div", "channel-top-row");
+        const labelNode = this.createUiNode(
+          "strong",
+          "channel-label",
+          channel.label
+        );
+        const badgeNode = this.createUiNode(
+          "span",
+          "channel-badge",
+          channel.badge
+        );
+        topRow.appendChild(labelNode);
+        topRow.appendChild(badgeNode);
+
+        const valueNode = this.createUiNode(
+          "span",
+          "channel-value",
+          channel.value
+        );
+
+        bodyWrap.appendChild(topRow);
+        bodyWrap.appendChild(valueNode);
+
+        const actionsWrap = this.createUiNode(
+          "div",
+          "channel-actions"
+        );
+
+        if (channel.canCopy) {
+          const copyButton = this.createUiNode(
+            "button",
+            "channel-copy-btn"
+          );
+          copyButton.type = "button";
+          copyButton.title = `Copy ${channel.label}`;
+          copyButton.setAttribute(
+            "aria-label",
+            `Copy ${channel.label} to clipboard`
+          );
+          copyButton.dataset.copyText = channel.value;
+          copyButton.innerHTML = this.getActionIconSvg("copy");
+          actionsWrap.appendChild(copyButton);
+        }
+
+        const arrowLink = this.createUiNode(
+          "a",
+          "channel-arrow-btn"
+        );
+        arrowLink.href = channel.url;
+        arrowLink.setAttribute(
+          "aria-label",
+          `Open ${channel.label}`
+        );
+        if (
+          channel.url.startsWith("http") ||
+          channel.url.endsWith(".pdf")
+        ) {
+          arrowLink.target = "_blank";
+          arrowLink.rel = "noopener noreferrer";
+        }
+        arrowLink.innerHTML = this.getActionIconSvg("arrow");
+        actionsWrap.appendChild(arrowLink);
+
+        cardNode.appendChild(iconWrap);
+        cardNode.appendChild(bodyWrap);
+        cardNode.appendChild(actionsWrap);
+        container.appendChild(cardNode);
+      });
+    } catch (contactChannelsError) {
+      console.error(
+        `Contact channels render failure: ${contactChannelsError.message}`
+      );
+    }
+  }
+
+  // render leadership affiliations with custom role badges
+  renderAffiliations() {
+    try {
+      const container = document.getElementById("organizations");
+      if (!container) {
+        return;
+      }
+
+      this.model.organizations.forEach((orgItem) => {
+        const cardLink = this.createUiNode(
+          "a",
+          "affiliation-card"
+        );
+        cardLink.href = orgItem.url;
+        cardLink.target = "_blank";
+        cardLink.rel = "noopener noreferrer";
+
+        const iconWrap = this.createUiNode(
+          "div",
+          "affiliation-icon-box"
+        );
+        iconWrap.innerHTML =
+          '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" ' +
+          'stroke="currentColor" stroke-width="2" stroke-linecap="round" ' +
+          'stroke-linejoin="round">' +
+          '<path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path>' +
+          '<path d="M19 21V11l-6-3"></path><path d="M9 9h1"></path>' +
+          '<path d="M9 13h1"></path><path d="M9 17h1"></path></svg>';
+
+        const bodyWrap = this.createUiNode(
+          "div",
+          "affiliation-body"
+        );
+        const titleRow = this.createUiNode(
+          "div",
+          "affiliation-title-row"
+        );
+        const nameNode = this.createUiNode(
+          "strong",
+          "affiliation-name",
+          orgItem.name
+        );
+        titleRow.appendChild(nameNode);
+
+        if (orgItem.role) {
+          const badgeClass = orgItem.badgeType
+            ? `affiliation-role-badge badge-${orgItem.badgeType}`
+            : "affiliation-role-badge";
+          const roleBadge = this.createUiNode(
+            "span",
+            badgeClass,
+            orgItem.role
+          );
+          titleRow.appendChild(roleBadge);
+        }
+
+        const categoryNode = this.createUiNode(
+          "span",
+          "affiliation-category",
+          orgItem.category || "Professional Affiliation"
+        );
+
+        bodyWrap.appendChild(titleRow);
+        bodyWrap.appendChild(categoryNode);
+
+        const arrowWrap = this.createUiNode(
+          "span",
+          "affiliation-arrow"
+        );
+        arrowWrap.innerHTML = this.getActionIconSvg("arrow");
+
+        cardLink.appendChild(iconWrap);
+        cardLink.appendChild(bodyWrap);
+        cardLink.appendChild(arrowWrap);
+        container.appendChild(cardLink);
+      });
+    } catch (affiliationsError) {
+      console.error(
+        `Affiliations render failure: ${affiliationsError.message}`
+      );
+    }
+  }
+
+  // attach click listeners for copy-to-clipboard interactions
+  setupClipboardHandlers() {
+    try {
+      const copyElements = document.querySelectorAll("[data-copy-text]");
+      copyElements.forEach((element) => {
+        element.addEventListener("click", async (clickEvent) => {
+          clickEvent.preventDefault();
+          clickEvent.stopPropagation();
+          const copyValue = element.dataset.copyText;
+          if (!copyValue) {
+            return;
+          }
+
+          try {
+            await navigator.clipboard.writeText(copyValue);
+            this.showCopyFeedback(element, copyValue);
+          } catch (clipboardError) {
+            console.warn(
+              `Clipboard write failed: ${clipboardError.message}`
+            );
+          }
+        });
+      });
+    } catch (handlerBindingError) {
+      console.error(
+        `Clipboard setup failure: ${handlerBindingError.message}`
+      );
+    }
+  }
+
+  // display animated confirmation when text is copied
+  showCopyFeedback(triggerElement, copiedValue) {
+    try {
+      const textSpan = triggerElement.querySelector(".copy-btn-text");
+      const originalText = textSpan ? textSpan.textContent : "";
+
+      if (textSpan) {
+        textSpan.textContent = "Copied!";
+      }
+      triggerElement.classList.add("is-copied");
+
+      let toast = document.getElementById("copy-toast-feedback");
+      if (!toast) {
+        toast = this.createUiNode("div", "copy-toast");
+        toast.id = "copy-toast-feedback";
+        document.body.appendChild(toast);
+      }
+
+      toast.textContent = `✓ Copied "${copiedValue}" to clipboard`;
+      toast.classList.add("is-visible");
+
+      setTimeout(() => {
+        if (textSpan) {
+          textSpan.textContent = originalText;
+        }
+        triggerElement.classList.remove("is-copied");
+      }, 2000);
+
+      setTimeout(() => {
+        if (toast) {
+          toast.classList.remove("is-visible");
+        }
+      }, 2500);
+    } catch (feedbackError) {
+      console.error(
+        `Feedback display failure: ${feedbackError.message}`
+      );
+    }
+  }
+
+  // backwards-compatible fallback for generic link collections
   renderLinkCollection(itemCollection, containerId) {
     try {
       const container = document.getElementById(containerId);
       if (!container) {
-        throw new Error(`Target container #${containerId} missing.`);
+        return;
       }
 
       itemCollection.forEach((linkItem) => {
         const anchorNode = this.createUiNode("a", "");
         const labelWrapper = this.createUiNode("span", "");
         const titleText = linkItem.label || linkItem.name;
-        const titleNode = this.createUiNode(
-          "strong",
-          "",
-          titleText
-        );
+        const titleNode = this.createUiNode("strong", "", titleText);
 
         anchorNode.href = linkItem.url;
         labelWrapper.appendChild(titleNode);
 
         if (linkItem.meta) {
-          const metaNode = this.createUiNode(
-            "small",
-            "",
-            linkItem.meta
-          );
+          const metaNode = this.createUiNode("small", "", linkItem.meta);
           labelWrapper.appendChild(metaNode);
         }
 
-        if (linkItem.url.startsWith("http")) {
+        if (
+          linkItem.url.startsWith("http") ||
+          linkItem.url.endsWith(".pdf")
+        ) {
           anchorNode.target = "_blank";
           anchorNode.rel = "noopener noreferrer";
         }
@@ -711,27 +1148,21 @@ export class UiEngine {
       });
     } catch (linkCollectionError) {
       console.error(
-        `Link collection rendering failure: ` +
-          `${linkCollectionError.message}`
+        `Link collection render failure: ${linkCollectionError.message}`
       );
     }
   }
 
-  // render styled contact action buttons
+  // backwards-compatible fallback for contact action buttons
   renderContactActions() {
     try {
-      const container = document.getElementById(
-        "contact-actions"
-      );
+      const container = document.getElementById("contact-actions");
       if (!container) {
-        throw new Error("Contact actions container missing from DOM.");
+        return;
       }
 
       this.model.contactLinks.forEach((contactItem) => {
-        const linkNode = this.createUiNode(
-          "a",
-          "contact-link"
-        );
+        const linkNode = this.createUiNode("a", "contact-link");
         const innerContent = this.createUiNode("div", "");
         const labelNode = this.createUiNode(
           "strong",
@@ -745,7 +1176,10 @@ export class UiEngine {
         );
 
         linkNode.href = contactItem.url;
-        if (contactItem.url.startsWith("http")) {
+        if (
+          contactItem.url.startsWith("http") ||
+          contactItem.url.endsWith(".pdf")
+        ) {
           linkNode.target = "_blank";
           linkNode.rel = "noopener noreferrer";
         }
@@ -757,8 +1191,7 @@ export class UiEngine {
       });
     } catch (contactActionsError) {
       console.error(
-        `Contact actions rendering failure: ` +
-          `${contactActionsError.message}`
+        `Contact actions render failure: ${contactActionsError.message}`
       );
     }
   }
@@ -808,16 +1241,13 @@ export class UiEngine {
         return savedTheme;
       }
 
-      const prefersLight = window.matchMedia(
-        "(prefers-color-scheme: light)"
-      ).matches;
-      return prefersLight ? "light" : "dark";
+      return "light";
     } catch (themeRetrievalError) {
       console.warn(
         `Could not retrieve stored theme: ` +
-          `${themeRetrievalError.message}. Using default dark theme.`
+          `${themeRetrievalError.message}. Using default light theme.`
       );
-      return "dark";
+      return "light";
     }
   }
 
@@ -834,7 +1264,7 @@ export class UiEngine {
       }
 
       const isDarkTheme = targetTheme === "dark";
-      toggleIcon.textContent = isDarkTheme ? "☾" : "☀";
+      toggleIcon.textContent = isDarkTheme ? "☀" : "☾";
       toggleButton.setAttribute(
         "aria-pressed",
         String(isDarkTheme)

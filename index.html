@@ -6,8 +6,17 @@
   <title>Cielle Mae Peñamora (@TechyElle) | Portfolio</title>
   <meta
     name="description"
-    content="Portfolio of Cielle Mae Peñamora (@TechyElle), Computer Engineering and Frontend Dev."
+    content="Portfolio of Cielle Mae C. Peñamora (@TechyElle), Full Stack Developer, Computer Engineering &amp; IT Support."
   >
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cielle Mae C. Peñamora (@TechyElle) | Full Stack Developer &amp; IT Support">
+  <meta property="og:description" content="Portfolio of Cielle Mae C. Peñamora (@TechyElle). Full Stack Developer, IT Support Specialist, and Maritime IT &amp; Systems Specialist studying Computer Engineering at PUP Manila.">
+  <meta property="og:image" content="assets/formal-portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cielle Mae C. Peñamora (@TechyElle)">
+  <meta name="twitter:description" content="Full Stack Developer, IT Support Specialist &amp; Maritime IT &amp; Systems Specialist.">
+  <meta name="twitter:image" content="assets/formal-portrait.png">
+  <link rel="icon" type="image/png" href="assets/profile-photo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,7 +29,7 @@
   >
   <link rel="stylesheet" href="css/main-styles.css">
 </head>
-<body data-theme="dark">
+<body data-theme="light">
   <main class="page-shell">
     <section class="hero panel reveal">
       <div class="hero-banner-container">
@@ -66,7 +75,8 @@
             <button
               class="theme-toggle"
               type="button"
-              aria-label="Toggle theme"
+              aria-label="Activate dark mode"
+              aria-pressed="false"
             >
               <span class="theme-toggle-icon" aria-hidden="true">☾</span>
             </button>
@@ -78,6 +88,32 @@
           </div>
 
           <div class="hero-actions">
+            <a
+              id="resume-cta"
+              class="button button-resume"
+              href="docs/cielle-mae-penamora-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View and download Cielle Mae Peñamora's Resume (PDF)"
+            >
+              <svg
+                class="button-icon"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+              View Resume (PDF)
+            </a>
             <a
               id="github-cta"
               class="button button-primary"
@@ -103,7 +139,7 @@
               </svg>
               Follow @TechyElle
             </a>
-            <a id="email-link" class="button button-ghost" href="mailto:pciellemae@gmail.com">
+            <a id="email-link" class="button button-ghost" href="mailto:penamoraciellemae@gmail.com">
               Email Me
             </a>
             <a class="button button-ghost" href="#projects">Repositories</a>
@@ -144,21 +180,19 @@
           <div id="projects-list" class="project-grid"></div>
         </section>
 
-        <section class="two-column">
-          <section class="panel reveal">
-            <div class="section-heading section-heading-inline">
-              <h2>Certifications</h2>
-              <a class="section-link" href="#contact">View All</a>
-            </div>
-            <div id="certifications-list" class="certification-list"></div>
-          </section>
-
-          <section class="panel reveal">
-            <div class="section-heading">
-              <h2>Recommendations</h2>
-            </div>
-            <div id="recommendations" class="recommendation-carousel"></div>
-          </section>
+        <section class="panel reveal">
+          <div class="section-heading section-heading-inline">
+            <h2>Certifications &amp; Credentials</h2>
+            <a
+              class="section-link"
+              href="https://www.linkedin.com/in/ms-ciellepe%C3%B1amora"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Verify on LinkedIn &rarr;
+            </a>
+          </div>
+          <div id="certifications-list" class="certification-list"></div>
         </section>
 
         <section id="gallery" class="panel reveal">
@@ -168,32 +202,128 @@
           <div id="gallery-grid" class="gallery-grid"></div>
         </section>
 
-        <section id="contact" class="panel footer-panel reveal">
-          <div class="footer-grid">
-            <div class="footer-column">
-              <h3>Affiliations</h3>
-              <div id="organizations" class="link-list"></div>
+        <section id="contact" class="panel connect-panel reveal">
+          <div class="section-heading section-heading-inline">
+            <div class="heading-with-status">
+              <h2>Connect &amp; Affiliations</h2>
+              <span
+                class="status-indicator-pill"
+                aria-label="Status: Available for opportunities"
+              >
+                <span class="status-indicator-pulse"></span>
+                <span>Open for Roles &amp; Maritime IT</span>
+              </span>
             </div>
+            <a class="section-link" href="mailto:penamoraciellemae@gmail.com">
+              Quick Contact &rarr;
+            </a>
+          </div>
 
-            <div class="footer-column">
-              <h3>Social Links</h3>
-              <div id="socials" class="link-list"></div>
-            </div>
-
-            <div class="footer-column">
-              <h3>Speaking &amp; Tech</h3>
-              <p class="footer-copy">
-                Available for speaking engagements, hackathons, and
-                open-source collaborations.
+          <div class="spotlight-card">
+            <div class="spotlight-header">
+              <span class="spotlight-eyebrow">
+                OPPORTUNITIES &amp; TECH FOCUS
+              </span>
+              <p class="spotlight-headline">
+                Actively seeking full-stack engineering, IT infrastructure
+                roles, and maritime / cruise ship IT opportunities.
               </p>
-              <a class="footer-inline-link" href="mailto:pciellemae@gmail.com">
-                Get in touch &rarr;
+            </div>
+            <div class="spotlight-tags">
+              <span class="spotlight-tag">Full Stack Web</span>
+              <span class="spotlight-tag">IT Infrastructure</span>
+              <span class="spotlight-tag">Maritime / Shipboard IT</span>
+              <span class="spotlight-tag">Technical Leadership</span>
+            </div>
+            <div class="spotlight-actions">
+              <a
+                class="button button-primary"
+                href="mailto:penamoraciellemae@gmail.com"
+                aria-label="Send email to Cielle Mae Peñamora"
+              >
+                <svg
+                  class="button-icon"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Email Me Directly
               </a>
+              <a
+                class="button button-resume"
+                href="docs/cielle-mae-penamora-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download Cielle Mae Peñamora Resume PDF"
+              >
+                <svg
+                  class="button-icon"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download CV (PDF)
+              </a>
+              <button
+                id="copy-email-button"
+                class="button button-ghost copy-cta-btn"
+                type="button"
+                data-copy-text="penamoraciellemae@gmail.com"
+                aria-label="Copy email address to clipboard"
+              >
+                <svg
+                  class="button-icon"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-btn-text">Copy Email</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="connect-bento-grid">
+            <div class="bento-column">
+              <div class="column-title-row">
+                <span class="column-title">Direct Channels &amp; Profiles</span>
+                <span class="column-badge">5 Channels</span>
+              </div>
+              <div id="contact-channels" class="channel-card-list"></div>
+              <div id="socials" class="hidden-compat"></div>
+              <div id="contact-actions" class="hidden-compat"></div>
             </div>
 
-            <div class="footer-column">
-              <h3>Direct Channels</h3>
-              <div id="contact-actions" class="contact-link-list"></div>
+            <div class="bento-column">
+              <div class="column-title-row">
+                <span class="column-title">Leadership &amp; Affiliations</span>
+                <span class="column-badge">4 Engagements</span>
+              </div>
+              <div id="organizations" class="affiliation-card-list"></div>
             </div>
           </div>
         </section>
@@ -221,13 +351,13 @@
             </div>
 
             <div class="access-meta">
-              <p class="access-label">ENGINEER / CREATOR</p>
+              <p class="access-label">FULL STACK &bull; IT SYSTEMS</p>
               <p class="access-name">CIELLE MAE</p>
             </div>
 
             <div class="access-footer">
               <div>
-                <p class="access-role">FRONTEND &amp; AI</p>
+                <p class="access-role">FULL STACK &bull; IT OFFICER ASPIRANT</p>
               </div>
               <div class="access-qr" aria-hidden="true">
                 <span></span><span></span><span></span>
@@ -238,7 +368,7 @@
           </div>
           <div class="membership-banner">
             <strong>POLYTECHNIC UNIV. OF THE PHILIPPINES</strong>
-            <span>BS Computer Engineering specialization in Software Dev.</span>
+            <span>BS Computer Engineering, Web &amp; Mobile Systems &bull; Expected 2028</span>
           </div>
         </section>
 

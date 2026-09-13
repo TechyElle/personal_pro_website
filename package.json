@@ -1,6 +1,7 @@
 {
   "name": "personal-pro-website",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "description": "Portfolio website for Cielle Mae Peñamora (@TechyElle)",
   "scripts": {
@@ -11,7 +12,8 @@
   "keywords": [
     "portfolio",
     "developer",
-    "frontend",
+    "fullstack",
+    "it-support",
     "personal-website"
   ],
   "author": "Cielle Mae Peñamora (@TechyElle)",
