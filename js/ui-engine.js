@@ -1,5 +1,6 @@
 // js/ui-engine.js
 import { portfolioConfig } from "./config-data.js";
+import { inject } from '@vercel/analytics';
 
 export class UiEngine {
   // manages runtime event handlers, dom hydration, and dynamic state
@@ -1332,6 +1333,9 @@ export class UiEngine {
 // self-executing lifecycle execution guard
 (() => {
   try {
+    // Initialize Vercel Web Analytics
+    inject();
+    
     const engine = new UiEngine(portfolioConfig);
     engine.initialize();
   } catch (criticalError) {
