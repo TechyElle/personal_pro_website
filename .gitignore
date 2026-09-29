@@ -22,3 +22,5 @@ Desktop.ini
 .idea/
 *.swp
 *.swo
+
+.vercel

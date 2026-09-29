@@ -21,6 +21,7 @@ export class PortfolioDataHolder {
     this.contactLinks = initialData.contactLinks || [];
     this.contactChannels = initialData.contactChannels || [];
     this.gallery = initialData.gallery || [];
+    this.coverLetter = initialData.coverLetter || null;
   }
 }
 
@@ -353,17 +354,19 @@ export const portfolioConfig = new PortfolioDataHolder({
     {
       id: "phone",
       label: "Mobile / Phone",
-      value: "0907 582 5520",
-      url: "tel:09075825520",
-      badge: "Direct Line",
+      value: "Available on request",
+      url:
+        "mailto:penamoraciellemae@gmail.com" +
+        "?subject=Contact%20Request%20-%20Phone%20Number",
+      badge: "On Request",
       icon: "phone",
-      canCopy: true,
+      canCopy: false,
     },
     {
       id: "resume",
       label: "Official Resume",
-      value: "cielle-mae-penamora-resume.pdf",
-      url: "docs/cielle-mae-penamora-resume.pdf",
+      value: "cielle-mae-penamora-resume-general.pdf",
+      url: "docs/cielle-mae-penamora-resume-general.pdf",
       badge: "PDF / CV",
       icon: "resume",
       canCopy: false,
@@ -372,7 +375,7 @@ export const portfolioConfig = new PortfolioDataHolder({
   socials: [
     {
       label: "Resume (PDF)",
-      url: "docs/cielle-mae-penamora-resume.pdf",
+      url: "docs/cielle-mae-penamora-resume-general.pdf",
       meta: "Official Resume / CV",
     },
     {
@@ -399,13 +402,15 @@ export const portfolioConfig = new PortfolioDataHolder({
     },
     {
       label: "Download / View Resume",
-      meta: "cielle-mae-penamora-resume.pdf",
-      url: "docs/cielle-mae-penamora-resume.pdf",
+      meta: "cielle-mae-penamora-resume-general.pdf",
+      url: "docs/cielle-mae-penamora-resume-general.pdf",
     },
     {
       label: "Mobile / Phone",
-      meta: "0907 582 5520",
-      url: "tel:09075825520",
+      meta: "Available on request",
+      url:
+        "mailto:penamoraciellemae@gmail.com" +
+        "?subject=Contact%20Request%20-%20Phone%20Number",
     },
     {
       label: "LinkedIn Profile",
@@ -435,4 +440,59 @@ export const portfolioConfig = new PortfolioDataHolder({
       caption: "Tech Workshop & Lab Session",
     },
   ],
+  coverLetter: {
+    title: "Internship Cover Letter",
+    senderName: "Cielle Mae C. Peñamora",
+    senderCity: "Sampaloc, Manila, Philippines",
+    senderEmail: "penamoraciellemae@gmail.com",
+    senderPhone: "Available upon request (via Email / Resume)",
+    dateText: "Academic Year 2025 – 2026",
+    recipientTitle: "Hiring Team",
+    roleTarget: "IT Support / Computer Engineering Internship (OJT)",
+    salutation: "Dear Hiring Team,",
+    paragraphs: [
+      "I am writing to express my strong interest in joining your " +
+        "organization as an IT / Engineering Intern. I am a third-year " +
+        "Computer Engineering student at the Polytechnic University " +
+        "of the Philippines (PUP Manila), looking to complete my " +
+        "required OJT hours with a team where I can contribute and " +
+        "expand my technical support, hardware diagnostics, and " +
+        "systems troubleshooting skills in a professional setting.",
+      "Recently, I worked at KNJ Printing, a school and office " +
+        "publishing services shop, where I set up, operated, and " +
+        "troubleshot printing and binding equipment for daily " +
+        "walk-in requests, diagnosing hardware faults and resolving " +
+        "them on the spot to keep turnaround on track. I also " +
+        "maintained and configured large-format printing hardware " +
+        "for tarpaulins, vinyl stickers, standees, wall murals, " +
+        "posters, backlit displays, and vehicle wraps, handling " +
+        "equipment and output issues directly on the shop floor. " +
+        "This gave me practical, hands-on experience with hardware " +
+        "diagnostics, preventive maintenance, and working directly " +
+        "with clients under time pressure.",
+      "Alongside this, I bring experience from Xontrix, an " +
+        "integrated electronics e-commerce and business management " +
+        "platform I helped lead as Full Stack Team Leader, where I " +
+        "set up, configured, and maintained development environments " +
+        "and devices across the team, resolving hardware and software " +
+        "issues to keep our workflows on schedule. I also kept our " +
+        "systems documented and our files organized using Git and " +
+        "GitHub — practices that translate directly to IT asset " +
+        "tracking and technical documentation. As President of PUP " +
+        "Seeds of the Nations, I coordinated directly with an " +
+        "external IT Consultant from Deloitte to organize a Python " +
+        "Mentorship Workshop, which strengthened my communication and " +
+        "stakeholder-coordination skills.",
+      "I am comfortable with Windows OS installation and " +
+        "configuration, quick to pick up new hardware and systems, " +
+        "and eager to build a solid technical foundation while " +
+        "contributing to your team. I would welcome the opportunity " +
+        "to discuss how I can support your engineering and IT needs " +
+        "during my internship. Thank you for considering my application.",
+    ],
+    signOff: "Sincerely,",
+    signeeName: "Cielle Mae C. Peñamora",
+    signeeRole:
+      "BS Computer Engineering (Web & Mobile Systems) • PUP Manila",
+  },
 });

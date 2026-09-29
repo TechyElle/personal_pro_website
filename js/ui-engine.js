@@ -37,6 +37,8 @@ export class UiEngine {
       this.renderContactChannels();
       this.setupClipboardHandlers();
       this.renderGalleryGrid();
+      this.renderCoverLetter();
+      this.setupCoverLetterModal();
     } catch (initializationError) {
       console.error(
         `Failed to initialize UI engine: ${initializationError.message}`
@@ -1227,6 +1229,218 @@ export class UiEngine {
     } catch (galleryRenderError) {
       console.error(
         `Gallery rendering failure: ${galleryRenderError.message}`
+      );
+    }
+  }
+
+  // render cover letter content inside document viewer
+  renderCoverLetter() {
+    try {
+      const container = document.getElementById("cover-letter-content");
+      if (!container || !this.model.coverLetter) {
+        return;
+      }
+
+      container.innerHTML = "";
+      const letterData = this.model.coverLetter;
+
+      // header sender and contact metadata
+      const headerBlock = this.createUiNode(
+        "header",
+        "letter-header-block"
+      );
+      const nameNode = this.createUiNode(
+        "h3",
+        "letter-sender-name",
+        letterData.senderName
+      );
+      headerBlock.appendChild(nameNode);
+
+      const metaRow = this.createUiNode("div", "letter-meta-row");
+      const cityNode = this.createUiNode(
+        "span",
+        "letter-meta-item",
+        `📍 ${letterData.senderCity}`
+      );
+      const emailNode = this.createUiNode(
+        "span",
+        "letter-meta-item",
+        `✉ ${letterData.senderEmail}`
+      );
+      const phoneNode = this.createUiNode(
+        "span",
+        "letter-meta-item",
+        `☎ ${letterData.senderPhone}`
+      );
+      metaRow.appendChild(cityNode);
+      metaRow.appendChild(emailNode);
+      metaRow.appendChild(phoneNode);
+      headerBlock.appendChild(metaRow);
+
+      const recipientBlock = this.createUiNode(
+        "div",
+        "letter-recipient-block"
+      );
+      const roleTag = this.createUiNode(
+        "span",
+        "letter-role-tag",
+        letterData.roleTarget
+      );
+      const recipientTitle = this.createUiNode(
+        "span",
+        "letter-recipient-title",
+        `Addressed to: ${letterData.recipientTitle}`
+      );
+      recipientBlock.appendChild(roleTag);
+      recipientBlock.appendChild(recipientTitle);
+      headerBlock.appendChild(recipientBlock);
+      container.appendChild(headerBlock);
+
+      // salutation greeting
+      const salutationNode = this.createUiNode(
+        "p",
+        "letter-salutation",
+        letterData.salutation
+      );
+      container.appendChild(salutationNode);
+
+      // narrative body paragraphs
+      letterData.paragraphs.forEach((paragraphText) => {
+        const paragraphNode = this.createUiNode(
+          "p",
+          "letter-paragraph",
+          paragraphText
+        );
+        container.appendChild(paragraphNode);
+      });
+
+      // formal sign-off block
+      const signOffBlock = this.createUiNode(
+        "footer",
+        "letter-sign-off"
+      );
+      const closeNode = this.createUiNode(
+        "p",
+        "",
+        letterData.signOff
+      );
+      const signeeNode = this.createUiNode(
+        "p",
+        "letter-signee-name",
+        letterData.signeeName
+      );
+      const roleNode = this.createUiNode(
+        "p",
+        "letter-signee-role",
+        letterData.signeeRole
+      );
+
+      signOffBlock.appendChild(closeNode);
+      signOffBlock.appendChild(signeeNode);
+      signOffBlock.appendChild(roleNode);
+      container.appendChild(signOffBlock);
+    } catch (coverLetterRenderError) {
+      console.error(
+        `Cover letter render failure: ` +
+          `${coverLetterRenderError.message}`
+      );
+    }
+  }
+
+  // manage cover letter modal open, close, and copy actions
+  setupCoverLetterModal() {
+    try {
+      const modal = document.getElementById("cover-letter-modal");
+      if (!modal) {
+        return;
+      }
+
+      const openButtons = document.querySelectorAll(
+        "#cover-letter-cta, #cover-letter-spotlight-btn"
+      );
+      const closeButtons = document.querySelectorAll(
+        "#close-cover-letter-btn, #close-cover-letter-footer-btn"
+      );
+      const copyButton = document.getElementById(
+        "copy-cover-letter-btn"
+      );
+
+      const openModal = () => {
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      };
+
+      const closeModal = () => {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      };
+
+      openButtons.forEach((btn) => {
+        btn.addEventListener("click", openModal);
+      });
+
+      closeButtons.forEach((btn) => {
+        btn.addEventListener("click", closeModal);
+      });
+
+      modal.addEventListener("click", (clickEvent) => {
+        if (clickEvent.target === modal) {
+          closeModal();
+        }
+      });
+
+      window.addEventListener("keydown", (keyEvent) => {
+        if (
+          keyEvent.key === "Escape" &&
+          modal.classList.contains("is-open")
+        ) {
+          closeModal();
+        }
+      });
+
+      if (copyButton && this.model.coverLetter) {
+        copyButton.addEventListener("click", async () => {
+          try {
+            const letter = this.model.coverLetter;
+            const plainText = [
+              letter.senderName,
+              letter.senderCity,
+              letter.senderEmail,
+              letter.senderPhone,
+              "",
+              letter.salutation,
+              "",
+              ...letter.paragraphs,
+              "",
+              letter.signOff,
+              letter.signeeName,
+              letter.signeeRole,
+            ].join("\n\n");
+
+            await navigator.clipboard.writeText(plainText);
+            const labelNode = document.getElementById(
+              "copy-cover-letter-label"
+            );
+            if (labelNode) {
+              const previousLabel = labelNode.textContent;
+              labelNode.textContent = "Copied!";
+              setTimeout(() => {
+                labelNode.textContent = previousLabel;
+              }, 2200);
+            }
+          } catch (clipboardError) {
+            console.warn(
+              `Cover letter copy failed: ${clipboardError.message}`
+            );
+          }
+        });
+      }
+    } catch (modalBindingError) {
+      console.error(
+        `Cover letter modal setup failure: ` +
+          `${modalBindingError.message}`
       );
     }
   }

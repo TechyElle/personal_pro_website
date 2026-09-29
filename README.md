@@ -1,6 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/✦_Cielle_Mae_C._Peñamora-Full_Stack_Dev_%26_IT_Support-6366F1?style=for-the-badge&logoColor=white" alt="Cielle Mae C. Peñamora Badge" />
-  <a href="docs/cielle-mae-penamora-resume.pdf" target="_blank"><img src="https://img.shields.io/badge/📄_Resume-View_PDF-7E3ACE?style=for-the-badge&logoColor=white" alt="View Resume" /></a>
+  <a href="docs/cielle-mae-penamora-resume-general.pdf" target="_blank"><img src="https://img.shields.io/badge/📄_Resume-View_PDF-7E3ACE?style=for-the-badge&logoColor=white" alt="View Resume" /></a>
+  <a href="docs/cielle-mae-penamora-coverletter-general.pdf" target="_blank"><img src="https://img.shields.io/badge/✉️_Cover_Letter-View_PDF-238636?style=for-the-badge&logoColor=white" alt="View Cover Letter" /></a>
 </p>
 
 <div align="center"></div>
@@ -40,7 +41,8 @@
 </p>
 
 <p align="center">
-  <a href="docs/cielle-mae-penamora-resume.pdf" target="_blank"><strong>📄 View Resume (PDF)</strong></a> •
+  <a href="docs/cielle-mae-penamora-resume-general.pdf" target="_blank"><strong>📄 View Resume (PDF)</strong></a> •
+  <a href="docs/cielle-mae-penamora-coverletter-general.pdf" target="_blank"><strong>✉️ Cover Letter (PDF)</strong></a> •
   <a href="#-career-objective">Career Objective</a> •
   <a href="#-skills--competencies">Skills</a> •
   <a href="#-work-experience">Experience</a> •
@@ -127,19 +129,19 @@ Brings hands-on experience diagnosing and resolving hardware and software issues
 ## 🔗 Connect with me
 
 <p align="center">
-  <a href="docs/cielle-mae-penamora-resume.pdf" target="_blank"><img src="https://img.shields.io/badge/Resume-PDF_Download-7E3ACE?style=for-the-badge&logoColor=white" alt="Resume" /></a>
+  <a href="docs/cielle-mae-penamora-resume-general.pdf" target="_blank"><img src="https://img.shields.io/badge/Resume-PDF_Download-7E3ACE?style=for-the-badge&logoColor=white" alt="Resume" /></a>
+  <a href="docs/cielle-mae-penamora-coverletter-general.pdf" target="_blank"><img src="https://img.shields.io/badge/Cover_Letter-PDF_Download-238636?style=for-the-badge&logoColor=white" alt="Cover Letter" /></a>
   <a href="https://linkedin.com/in/ms-ciellepeñamora" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://github.com/TechyElle" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="tel:09075825520"><img src="https://img.shields.io/badge/Phone-0907_582_5520-238636?style=for-the-badge&logoColor=white" alt="Phone" /></a>
   <a href="mailto:penamoraciellemae@gmail.com"><img src="https://img.shields.io/badge/Email-penamoraciellemae%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
 <p align="center">
-  <a href="docs/cielle-mae-penamora-resume.pdf" target="_blank"><strong>Resume (PDF)</strong></a> •
+  <a href="docs/cielle-mae-penamora-resume-general.pdf" target="_blank"><strong>Resume (PDF)</strong></a> •
+  <a href="docs/cielle-mae-penamora-coverletter-general.pdf" target="_blank"><strong>Cover Letter (PDF)</strong></a> •
   <a href="https://linkedin.com/in/ms-ciellepeñamora"><strong>LinkedIn</strong></a> •
   <a href="https://github.com/TechyElle"><strong>GitHub</strong></a> •
-  <a href="mailto:penamoraciellemae@gmail.com"><strong>Email</strong></a> •
-  <a href="tel:09075825520"><strong>0907 582 5520</strong></a>
+  <a href="mailto:penamoraciellemae@gmail.com"><strong>Email</strong></a>
 </p>
 
 ---

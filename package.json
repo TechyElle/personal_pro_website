@@ -1,9 +1,9 @@
 {
-  "name": "personal-pro-website",
+  "name": "ciellemae-dev",
   "version": "1.0.0",
   "type": "module",
   "private": true,
-  "description": "Portfolio website for Cielle Mae Peñamora (@TechyElle)",
+  "description": "Portfolio website for Cielle Mae Peñamora",
   "scripts": {
     "dev": "npx serve .",
     "start": "npx serve .",
@@ -16,6 +16,9 @@
     "it-support",
     "personal-website"
   ],
-  "author": "Cielle Mae Peñamora (@TechyElle)",
-  "license": "MIT"
+  "author": "Cielle Mae Peñamora",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
 }
