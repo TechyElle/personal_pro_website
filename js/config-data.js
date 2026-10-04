@@ -31,54 +31,54 @@ export const portfolioConfig = new PortfolioDataHolder({
   handle: "@TechyElle",
   location: "📍 Sampaloc, Manila, Philippines",
   roles: [
-    "Full Stack Developer",
+    "IT Intern",
     "IT Support Specialist",
-    "Maritime IT & Systems Specialist",
+    "Networking & Systems",
+    "Full Stack Developer",
     "BS Computer Engineering (PUP)",
   ],
   typingPhrases: [
     "I'm Elle",
-    "Full Stack Developer",
-    "IT Support Specialist",
-    "Maritime IT & Systems Specialist",
-    "Computer Engineering @ PUP Manila",
+    "IT Intern & IT Support",
     "Hardware & Software Diagnostics",
-    "Systems & Network Maintenance",
+    "Networking Fundamentals",
+    "Full Stack Development",
+    "Computer Engineering @ PUP Manila",
+    "Windows OS & Systems Maintenance",
     "Web & Mobile Systems",
   ],
   achievements: [
     "BS Computer Engineering",
-    "PUP Manila (Expected 2028)",
+    "PUP Manila (08/2024 – Present)",
     "Harvard CS50P Alum",
     "DataCamp Certified",
     "School of Leaders 1 Awardee",
   ],
   funBadges: [
-    { label: "full-stack-dev", theme: "badge-purple" },
-    { label: "it-support-ready", theme: "badge-cyan" },
-    { label: "maritime-it-systems", theme: "badge-pink" },
-    { label: "systems-troubleshooter", theme: "badge-blue" },
+    { label: "it-intern-ready", theme: "badge-purple" },
+    { label: "it-support-troubleshooting", theme: "badge-cyan" },
+    { label: "networking-fundamentals", theme: "badge-pink" },
+    { label: "full-stack-dev", theme: "badge-blue" },
   ],
   about: [
     "Third-year Computer Engineering student at Polytechnic University " +
-      "of the Philippines (PUP Manila) specializing in Web & Mobile Systems, " +
-      "driven by a strong passion for Full Stack Development and IT Support.",
-    "Brings hands-on experience diagnosing and resolving hardware and " +
-      "software issues, maintaining Windows systems, configuring networks " +
-      "(LAN, Wi-Fi, IP configuration), and providing dependable technical " +
-      "support to end users in high-turnaround and collaborative environments.",
-    "Actively open to Full Stack Engineering and IT Support roles, pursuing " +
-      "a dedicated career pathway toward Cruise Ship IT Officer and maritime " +
-      "systems operations where mission-critical systems reliability, 24/7 " +
-      "network uptime, and proactive hardware upkeep are essential.",
+      "of the Philippines (Web & Mobile Systems specialization) " +
+      "seeking an IT Internship.",
+    "Hands-on experience diagnosing and resolving hardware, software, " +
+      "and network issues, maintaining systems and devices, and " +
+      "supporting end users, alongside full-stack web development.",
+    "Comfortable with Windows OS installation, troubleshooting, basic " +
+      "networking (LAN, Wi-Fi, IP configuration), and version-controlled " +
+      "team workflows, and eager to grow in IT support, systems " +
+      "administration, and IT security.",
   ],
   experience: [
     {
       title:
         "Document Services & Large Format Production Assistant",
       company:
-        "KNJ Printing — School/Office Publishing Services",
-      year: "2026",
+        "KNJ Printing — Publishing Services • Infanta, Quezon",
+      year: "07/2026 – 09/2026",
       details: [
         "Set up, operated, and troubleshot printing and binding " +
           "equipment for daily walk-in requests, diagnosing hardware " +
@@ -86,7 +86,8 @@ export const portfolioConfig = new PortfolioDataHolder({
           "turnaround on track.",
         "Maintained and configured large-format printing hardware for " +
           "tarpaulins, vinyl stickers, standees, wall murals, posters, " +
-          "backlit displays, and vehicle wraps.",
+          "backlit displays, and vehicle wraps, handling output and " +
+          "equipment issues directly on the shop floor.",
         "Edited sermon recordings in Adobe Premiere, applying software " +
           "proficiency to a real production workflow.",
       ],
@@ -94,25 +95,25 @@ export const portfolioConfig = new PortfolioDataHolder({
     {
       title: "Team Leader, Full Stack",
       company:
-        "Xontrix — Electronics E-Commerce & AI Business Management",
-      year: "2025 - 2026",
+        "Xontrix — AI E-Commerce & Management Platform • Manila",
+      year: "01/2026 – 05/2026",
       details: [
         "Set up, configured, and maintained development environments " +
           "and devices across the team, resolving hardware and software " +
           "issues to keep workflows on schedule.",
         "Maintained version control standards (Git/GitHub) with backups " +
-          "and a traceable file structure, documenting technical " +
-          "issues and resolutions for team reference.",
+          "and a traceable file structure, and documented technical " +
+          "issues, configurations, and resolutions for team reference.",
       ],
     },
     {
       title: "President",
-      company: "PUP Seeds of the Nations (PUP SONS)",
-      year: "2025 - 2026",
+      company: "PUP Seeds of the Nations (PUP SONS) • Manila",
+      year: "08/2025 – 08/2026",
       details: [
         "Coordinated with an external IT Consultant from Deloitte to " +
-          "plan and run a Python Mentorship Workshop, managing logistics " +
-          "and stakeholder communication.",
+          "plan and run a Python Mentorship Workshop, managing " +
+          "logistics and stakeholder communication.",
         "Led timelines and communication across officer committees for " +
           "technical and community initiatives.",
         "Scoped requirements and documentation for Harvest, an " +
@@ -122,10 +123,11 @@ export const portfolioConfig = new PortfolioDataHolder({
     },
     {
       title: "BS Computer Engineering (Web & Mobile Systems)",
-      company: "Polytechnic University of the Philippines - Manila",
-      year: "Expected 2028",
+      company: "Polytechnic University of the Philippines • Manila",
+      year: "08/2024 – Present",
       details: [
-        "Third-year student specializing in Web & Mobile Systems.",
+        "Third-year student specializing in Web & Mobile Systems, " +
+          "actively seeking an IT Internship.",
       ],
     },
     {
@@ -448,47 +450,46 @@ export const portfolioConfig = new PortfolioDataHolder({
     senderPhone: "Available upon request (via Email / Resume)",
     dateText: "Academic Year 2025 – 2026",
     recipientTitle: "Hiring Team",
-    roleTarget: "IT Support / Computer Engineering Internship (OJT)",
+    roleTarget: "IT Internship / OJT (IT Support & Networking)",
     salutation: "Dear Hiring Team,",
     paragraphs: [
-      "I am writing to express my strong interest in joining your " +
-        "organization as an IT / Engineering Intern. I am a third-year " +
-        "Computer Engineering student at the Polytechnic University " +
-        "of the Philippines (PUP Manila), looking to complete my " +
-        "required OJT hours with a team where I can contribute and " +
-        "expand my technical support, hardware diagnostics, and " +
-        "systems troubleshooting skills in a professional setting.",
-      "Recently, I worked at KNJ Printing, a school and office " +
-        "publishing services shop, where I set up, operated, and " +
-        "troubleshot printing and binding equipment for daily " +
-        "walk-in requests, diagnosing hardware faults and resolving " +
-        "them on the spot to keep turnaround on track. I also " +
-        "maintained and configured large-format printing hardware " +
-        "for tarpaulins, vinyl stickers, standees, wall murals, " +
-        "posters, backlit displays, and vehicle wraps, handling " +
-        "equipment and output issues directly on the shop floor. " +
-        "This gave me practical, hands-on experience with hardware " +
-        "diagnostics, preventive maintenance, and working directly " +
-        "with clients under time pressure.",
-      "Alongside this, I bring experience from Xontrix, an " +
-        "integrated electronics e-commerce and business management " +
-        "platform I helped lead as Full Stack Team Leader, where I " +
-        "set up, configured, and maintained development environments " +
-        "and devices across the team, resolving hardware and software " +
-        "issues to keep our workflows on schedule. I also kept our " +
-        "systems documented and our files organized using Git and " +
-        "GitHub — practices that translate directly to IT asset " +
-        "tracking and technical documentation. As President of PUP " +
-        "Seeds of the Nations, I coordinated directly with an " +
-        "external IT Consultant from Deloitte to organize a Python " +
-        "Mentorship Workshop, which strengthened my communication and " +
-        "stakeholder-coordination skills.",
-      "I am comfortable with Windows OS installation and " +
-        "configuration, quick to pick up new hardware and systems, " +
-        "and eager to build a solid technical foundation while " +
-        "contributing to your team. I would welcome the opportunity " +
-        "to discuss how I can support your engineering and IT needs " +
-        "during my internship. Thank you for considering my application.",
+      "I am writing to apply for the [Position Title] at [Company Name]. " +
+        "I am a third-year Computer Engineering student at the " +
+        "Polytechnic University of the Philippines, and I am looking to " +
+        "complete my required OJT hours with a company where I can grow " +
+        "my technical support, hardware, and networking skills in a real " +
+        "corporate setting.",
+      "From July to September 2026, I worked at KNJ Printing, a school " +
+        "and office publishing services shop in Infanta, Quezon, where " +
+        "I set up, operated, and troubleshot printing and binding " +
+        "equipment for daily walk-in requests, diagnosing hardware " +
+        "faults and resolving them on the spot to keep turnaround on " +
+        "track. I also maintained and configured large-format printing " +
+        "hardware for tarpaulins, vinyl stickers, standees, wall " +
+        "murals, posters, backlit displays, and vehicle wraps, " +
+        "handling equipment and output issues directly on the shop " +
+        "floor. This gave me practical, hands-on experience with " +
+        "hardware diagnostics, preventive maintenance, and working " +
+        "directly with clients under time pressure.",
+      "Alongside this, I bring experience from Xontrix, an integrated " +
+        "electronics e-commerce and business management platform I " +
+        "helped lead as Full Stack Team Leader from January to May " +
+        "2026, where I set up, configured, and maintained development " +
+        "environments and devices across the team, resolving hardware " +
+        "and software issues to keep workflows on schedule. I also " +
+        "kept our systems documented and our files organized using Git " +
+        "and GitHub — practices that translate well to IT asset " +
+        "tracking and technical documentation. As President of PUP Seeds " +
+        "of the Nations (August 2025 to August 2026), I coordinated " +
+        "directly with an external IT Consultant from Deloitte to " +
+        "organize a Python Mentorship Workshop, which strengthened my " +
+        "communication and stakeholder-coordination skills.",
+      "I am comfortable with Windows OS installation and configuration, " +
+        "quick to pick up new hardware and systems, and eager to build a " +
+        "solid technical foundation while contributing to your team. " +
+        "I would welcome the opportunity to discuss how I can support " +
+        "[Company Name] during my internship. Thank you for considering " +
+        "my application.",
     ],
     signOff: "Sincerely,",
     signeeName: "Cielle Mae C. Peñamora",

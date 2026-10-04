@@ -9,7 +9,7 @@
 <h1 align="center">✦ Cielle Mae C. Peñamora</h1>
 
 <p align="center">
-  <strong>Full Stack Developer</strong> &bull; <strong>IT Support Specialist</strong> &bull; <strong>Maritime IT &amp; Systems Specialist</strong><br>
+  <strong>IT Intern</strong> &bull; <strong>IT Support &amp; Networking</strong> &bull; <strong>Full Stack Developer</strong><br>
   📍 Based in Sampaloc, Manila, Philippines
 </p>
 
@@ -31,8 +31,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Education-BS_CpE_(Web_%26_Mobile)-orange?style=flat-square" alt="Education" />
-  <img src="https://img.shields.io/badge/Target_Role-Full_Stack_%26_IT_Support-blue?style=flat-square" alt="Target Role" />
-  <img src="https://img.shields.io/badge/PUP_Manila-Expected_2028-green?style=flat-square" alt="PUP Manila" />
+  <img src="https://img.shields.io/badge/Target_Role-IT_Intern_%26_Support-blue?style=flat-square" alt="Target Role" />
+  <img src="https://img.shields.io/badge/PUP_Manila-08/2024_--_Present-green?style=flat-square" alt="PUP Manila" />
   <img src="https://img.shields.io/badge/Certified-DataCamp_%26_CS50P-8A2BE2?style=flat-square" alt="Certifications" />
 </p>
 
@@ -59,9 +59,9 @@
 $ whoami
 ```
 
-Third-year Computer Engineering student at Polytechnic University of the Philippines (PUP Manila) specializing in Web & Mobile Systems, working across Full Stack Development and IT Support.
+Third-year Computer Engineering student at Polytechnic University of the Philippines (PUP Manila) specializing in Web & Mobile Systems, seeking an IT Internship.
 
-Brings hands-on experience diagnosing and resolving hardware and software issues, maintaining Windows systems, configuring networks (LAN, Wi-Fi, IP configuration), and providing dependable technical support to end users in high-turnaround and collaborative environments. Actively open to Full Stack Engineering and IT Support roles, pursuing a dedicated career pathway toward Cruise Ship IT Officer and maritime systems operations where mission-critical systems reliability, 24/7 network uptime, and proactive hardware upkeep are essential.
+Brings hands-on experience diagnosing and resolving hardware, software, and network issues, maintaining systems and devices, and supporting end users, alongside full-stack web development. Comfortable with Windows OS installation, troubleshooting, basic networking (LAN, Wi-Fi, IP configuration), and version-controlled team workflows, and eager to grow in IT support, systems administration, and IT security.
 
 ---
 
@@ -79,19 +79,19 @@ Brings hands-on experience diagnosing and resolving hardware and software issues
 
 ## 💼 Work Experience
 
-* **Document Services & Large Format Production Assistant** (2026)  
-  *KNJ Printing — School/Office Publishing Services*  
+* **Document Services & Large Format Production Assistant** (07/2026 – 09/2026)  
+  *KNJ Printing — School/Office Publishing Services • Infanta, Quezon*  
   * Set up, operated, and troubleshot printing and binding equipment for daily walk-in requests, diagnosing hardware faults and resolving them on the spot to keep same-day turnaround on track.  
-  * Maintained and configured large-format printing hardware for tarpaulins, vinyl stickers, standees, wall murals, posters, backlit displays, and vehicle wraps.  
+  * Maintained and configured large-format printing hardware for tarpaulins, vinyl stickers, standees, wall murals, posters, backlit displays, and vehicle wraps, handling output and equipment issues directly on the shop floor.  
   * Edited sermon recordings in Adobe Premiere, applying software proficiency to a real production workflow.
 
-* **Team Leader, Full Stack** (2025 – 2026)  
-  *Xontrix — Integrated Electronics E-Commerce & AI-Powered Business Management Platform*  
+* **Team Leader, Full Stack** (01/2026 – 05/2026)  
+  *Xontrix — Integrated Electronics E-Commerce & AI-Powered Business Management Platform • Manila, Philippines*  
   * Set up, configured, and maintained development environments and devices across the team, resolving hardware and software issues to keep workflows on schedule.  
   * Maintained version control standards (Git/GitHub) with backups and a traceable file structure, and documented technical issues, configurations, and resolutions for team reference.
 
-* **President** (2025 – 2026)  
-  *PUP Seeds of the Nations (PUP SONS)*  
+* **President** (08/2025 – 08/2026)  
+  *PUP Seeds of the Nations (PUP SONS) • Manila, Philippines*  
   * Coordinated with an external IT Consultant from Deloitte to plan and run a Python Mentorship Workshop, managing logistics and stakeholder communication.  
   * Led timelines and communication across officer committees for technical and community initiatives.  
   * Scoped requirements and documentation for Harvest, an automated member-tracking platform, bridging operational and technical needs.
@@ -113,7 +113,7 @@ Brings hands-on experience diagnosing and resolving hardware and software issues
 ## 🏆 Education & Certifications
 
 ### Education
-* **Polytechnic University of the Philippines** — BS Computer Engineering, Web & Mobile Systems Specialization (Expected 2028)
+* **Polytechnic University of the Philippines** — BS Computer Engineering, Web & Mobile Systems Specialization (08/2024 – Present) • Manila, Philippines
 * **Northern Quezon College Incorporation** — ABM Strand (With High Honors, Class & Batch President)
 * **Infanta National High School** — Special Program in the Arts (Visual Arts) (With High Honors)
 
