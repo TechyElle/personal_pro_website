@@ -1,5 +1,5 @@
 // js/ui-engine.js
-import { portfolioConfig } from "./config-data.js";
+import { portfolioConfig } from "./config-data.js?v=1.0.1";
 
 export class UiEngine {
   // manages runtime event handlers, dom hydration, and dynamic state
