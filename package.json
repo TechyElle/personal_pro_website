@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "private": true,
-  "description": "Portfolio website for Cielle Mae Peñamora",
+  "description": "Portfolio website for Cielle Mae Peñamora (@TechyElle) - Network Infrastructure & Computer Engineering",
   "scripts": {
     "dev": "npx serve .",
     "start": "npx serve .",
@@ -11,9 +11,10 @@
   },
   "keywords": [
     "portfolio",
-    "developer",
-    "fullstack",
-    "it-support",
+    "network-infrastructure",
+    "computer-engineering",
+    "cisco-ccna",
+    "electronics-communications",
     "personal-website"
   ],
   "author": "Cielle Mae Peñamora",

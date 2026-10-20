@@ -1054,7 +1054,10 @@ body[data-theme="dark"] .repo-tech-tag {
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .certification-item:hover {

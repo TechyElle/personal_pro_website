@@ -325,6 +325,11 @@ export class UiEngine {
     try {
       const container = document.getElementById("tech-stack");
       const categoryLabels = {
+        networkOps: "Network Engineering & Operations",
+        electronicsComms: "Electronics & Communications Engineering",
+        facilitiesSite: "Facilities & Site Engineering",
+        documentationReporting: "Documentation & Reporting",
+        toolsLanguages: "Tools & Languages",
         itSupport: "IT Support & Troubleshooting",
         systemsMaintenance: "Systems & Software Maintenance",
         networkingSecurity: "Networking Fundamentals & IT Security",
@@ -336,6 +341,11 @@ export class UiEngine {
       };
 
       const categoryIcons = {
+        networkOps: "🌐",
+        electronicsComms: "⚡",
+        facilitiesSite: "🛠️",
+        documentationReporting: "📋",
+        toolsLanguages: "💻",
         itSupport: "🛠️",
         systemsMaintenance: "💻",
         networkingSecurity: "🌐",
@@ -820,6 +830,18 @@ export class UiEngine {
           '-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 ' +
           '22 16.92z"></path></svg>'
         );
+      case "website":
+      case "globe":
+        return (
+          '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" ' +
+          'stroke="currentColor" stroke-width="2" stroke-linecap="round" ' +
+          'stroke-linejoin="round">' +
+          '<circle cx="12" cy="12" r="10"></circle>' +
+          '<line x1="2" y1="12" x2="22" y2="12"></line>' +
+          '<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 ' +
+          '15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>' +
+          '</svg>'
+        );
       case "resume":
       default:
         return (
@@ -1090,6 +1112,8 @@ export class UiEngine {
       if (!toast) {
         toast = this.createUiNode("div", "copy-toast");
         toast.id = "copy-toast-feedback";
+        toast.setAttribute("role", "status");
+        toast.setAttribute("aria-live", "polite");
         document.body.appendChild(toast);
       }
 
@@ -1365,16 +1389,33 @@ export class UiEngine {
         "copy-cover-letter-btn"
       );
 
+      let previouslyFocusedNode = null;
+
       const openModal = () => {
+        previouslyFocusedNode = document.activeElement;
         modal.classList.add("is-open");
         modal.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
+
+        const closeBtn = document.getElementById(
+          "close-cover-letter-btn"
+        );
+        if (closeBtn) {
+          closeBtn.focus();
+        }
       };
 
       const closeModal = () => {
         modal.classList.remove("is-open");
         modal.setAttribute("aria-hidden", "true");
         document.body.style.overflow = "";
+
+        if (
+          previouslyFocusedNode &&
+          typeof previouslyFocusedNode.focus === "function"
+        ) {
+          previouslyFocusedNode.focus();
+        }
       };
 
       openButtons.forEach((btn) => {
@@ -1388,6 +1429,41 @@ export class UiEngine {
       modal.addEventListener("click", (clickEvent) => {
         if (clickEvent.target === modal) {
           closeModal();
+        }
+      });
+
+      modal.addEventListener("keydown", (keyEvent) => {
+        if (keyEvent.key !== "Tab") {
+          return;
+        }
+
+        const focusableNodes = Array.from(
+          modal.querySelectorAll(
+            "button, a[href], input, select, textarea, " +
+              '[tabindex]:not([tabindex="-1"])'
+          )
+        );
+
+        if (focusableNodes.length === 0) {
+          return;
+        }
+
+        const firstNode = focusableNodes[0];
+        const lastNode =
+          focusableNodes[focusableNodes.length - 1];
+
+        if (
+          keyEvent.shiftKey &&
+          document.activeElement === firstNode
+        ) {
+          keyEvent.preventDefault();
+          lastNode.focus();
+        } else if (
+          !keyEvent.shiftKey &&
+          document.activeElement === lastNode
+        ) {
+          keyEvent.preventDefault();
+          firstNode.focus();
         }
       });
 
